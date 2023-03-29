@@ -1,0 +1,75 @@
+/* CSS filtre note */
+
+.rate {
+    display: flex;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* CSS filtre euro */
+
+.prix {
+    display: flex;
+    height: 46px;
+    padding: 0 10px;
+}
+.prix:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.prix:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.prix:not(:checked) > label:before {
+    content: '€ ';
+}
+.prix > input:checked ~ label {
+    color: #ffc700;    
+}
+.prix:not(:checked) > label:hover,
+.prix:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.prix > input:checked + label:hover,
+.prix > input:checked + label:hover ~ label,
+.prix > input:checked ~ label:hover,
+.prix > input:checked ~ label:hover ~ label,
+.prix > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

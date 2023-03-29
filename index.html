@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>The spoon</title>
 </head>
 <body>
+
+    <!-- filtres -->
+    
+    <!-- categories -->
+
+    <section>
+        <form>
+            <label for="categorie">Catégorie</label>
+            <select name="categorie" id="categorie">
+                <option value="fastfood">Fast Food</option>
+                <option value="japonais">Japonais</option>
+                <option value="chinois">Chinois</option>
+                <option value="mexicain">Mexicain</option>
+                <option value="italien">Italien</option>
+                <option value="français">Français</option>
+                <option value="gastronomique">Gastronomique</option>
+            </select>
+        </form>
+
+<!-- star rating -->
+        
+        <div class="rate">
+            <p>Note</p>
+            <input type="radio" id="star5" name="rate" value="5">
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4">
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3">
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2">
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1">
+            <label for="star1" title="text">1 star</label>
+          </div>
+
+        <!-- prix -->
+
+        <div class="prix">
+            <p>Prix</p>
+            <input type="radio" id="5euro" name="prix" value="5">
+            <label for="5euro" title="text">5 euro</label>
+            <input type="radio" id="4euro" name="prix" value="4">
+            <label for="4euro" title="text">4 euro</label>
+            <input type="radio" id="3euro" name="prix" value="3">
+            <label for="3euro" title="text">3 euro</label>
+            <input type="radio" id="2euro" name="prix" value="2">
+            <label for="2euro" title="text">2 euro</label>
+            <input type="radio" id="1euro" name="prix" value="1">
+            <label for="1euro" title="text">1 euro</label>
+        </div>
+
+    </section>
     
 </body>
 </html>
