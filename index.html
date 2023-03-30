@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>The spoon</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- filtres -->
+
+    <!-- categories -->
+
+    <section class="filtre">
+      <form>
+        <label for="categorie">Catégorie</label>
+        <select name="categorie" id="categorie">
+          <option value="fastfood">Fast Food</option>
+          <option value="japonais">Japonais</option>
+          <option value="chinois">Chinois</option>
+          <option value="mexicain">Mexicain</option>
+          <option value="italien">Italien</option>
+          <option value="français">Français</option>
+          <option value="gastronomique">Gastronomique</option>
+        </select>
+      </form>
+
+      <!-- star rating -->
+
+      <div class="rate">
+        <p>Note</p>
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text"></label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text"></label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text"></label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text"></label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text"></label>
+      </div>
+
+      <!-- prix -->
+
+      <div class="rate" id="prix">
+        <p>Prix</p>
+        <input type="radio" id="5euro" name="prix" value="5" />
+        <label for="5euro" title="text"></label>
+        <input type="radio" id="4euro" name="prix" value="4" />
+        <label for="4euro" title="text"></label>
+        <input type="radio" id="3euro" name="prix" value="3" />
+        <label for="3euro" title="text"></label>
+        <input type="radio" id="2euro" name="prix" value="2" />
+        <label for="2euro" title="text"></label>
+        <input type="radio" id="1euro" name="prix" value="1" />
+        <label for="1euro" title="text"></label>
+      </div>
+
+      <!--  livraison -->
+      <div class="checkbox">
+        <label for="livraison">Livraison</label>
+        <input type="checkbox" name="livraison" id="livraison" />
+      </div>
+
+      <!-- à emporter -->
+      <div class="checkbox">
+        <label for="emporter">À emporter</label>
+        <input type="checkbox" name="emporter" id="emporter" />
+      </div class=>
+      <!-- distance -->
+      <div class="checkbox">
+        <label for="distance">Distance</label>
+        <input type="range" name="distance" id="distance" />
+      </div>
+      <!-- hallal -->
+      <div class="checkbox">
+        <label for="hallal">Hallal</label>
+        <input type="checkbox" name="hallal" id="hallal" />
+      </div>
+      <!-- végétarien -->
+      <div class="checkbox">
+        <label for="vege">Végétarien</label>
+        <input type="checkbox" name="vege" id="vege" />
+      </div>
+    </section>
+  </body>
 </html>
