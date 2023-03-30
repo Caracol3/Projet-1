@@ -7,23 +7,26 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>The spoon</title>
   </head>
-  <body>
-    <nav>
-      <h1>The Spoon</h1>
-      <div>
-      <input type="search" placeholder="Recherche" />
-      <button>Rechercher</button>
+    <main>
+    <header>
+      <nav>
+        <h1>The Spoon</h1>
+    </header>
+        <div id="rechercheBarre">
+          <input type="search" placeholder="Recherche" />
+          <button>Rechercher</button>
 
-      <form action="#">
-        <label for="filt">filtre</label>
-        <select name="filtre" id="filt">
-          <option value="meilleurs note">meilleurs note</option>
-          <option value="distance">distance</option>
-          <option value="prix">prix</option>
-        </select>
-        <input type="submit" value="Submit" />
-      </form>
-      </div>
+          <form action="#">
+            <label for="filt">filtre</label>
+            <select name="filtre" id="filt">
+              <option value="meilleurs note">meilleurs note</option>
+              <option value="distance">distance</option>
+              <option value="prix">prix</option>
+            </select>
+            <input type="submit" value="Submit" id="submit"/>
+          </form>
+        </div>
     </nav>
-  </body>
+  </head>
+</main>
 </html>
