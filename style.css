@@ -4,7 +4,10 @@
 }
 header{
   background-color: #456990;
-  height: 5rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
   display: flex;
@@ -39,3 +42,4 @@ select{
   margin: 5%;
   height: 75%;
 }
+
