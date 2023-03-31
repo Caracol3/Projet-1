@@ -5,13 +5,14 @@
 }
 body {
     background-color: var(--primary-color);
+    margin: 0;
 }
 
-p {
+article>p {
     background-color: var(--secondary-color);
 }
 
-img {
+h2~img {
     width: 1rem;
 }
 
@@ -35,5 +36,88 @@ button {
 }
 article {
     display: grid;
-    background-color:lightgray ;
+    background-color: var(--tertiary-color) ;
+
+
+/* début menu burger filtre */
+
+.filtre {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  background-color: var(--tertiary-color);
+  justify-content: space-around;
+  border: solid 1px;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.rate {
+  display: flex;
+  height: 20px;
+}
+
+.rate p {
+  padding-right: 20px;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#prix p {
+  padding-right: 30px;
+}
+/* CSS filtre note */
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: whitesmoke;
+  transform: translate(0, -15px);
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #fac60a;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #e0b722;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c6a017;
+}
+
+/* CSS filtre euro  */
+
+#prix:not(:checked) > label:before {
+  content: "€ ";
+}
+
+/* fin menu burger filtre */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  align-items: center;
+  padding: 0 10px;
+  border-top: solid 1px;
 }
