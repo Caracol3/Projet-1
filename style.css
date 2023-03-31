@@ -1,0 +1,39 @@
+:root {
+    --primary-color:#456990;
+    --secondary-color:#e2e2e2;
+    --tertiary-color: #b7cece;
+}
+body {
+    background-color: var(--primary-color);
+}
+
+p {
+    background-color: var(--secondary-color);
+}
+
+img {
+    width: 1rem;
+}
+
+.near {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+}
+
+.near>h2 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+h2 {
+    color: whitesmoke;
+}
+
+button {
+    float: right;
+}
+article {
+    display: grid;
+    background-color:lightgray ;
+}
