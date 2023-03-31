@@ -27,19 +27,23 @@ form {
   align-items: center;
 }
 input, button{
-  margin-bottom: 10px;
-  width: 150px;
+  width: 6rem;
   height: 30px;
-
+  background-color: #b7cece;
+  border-radius: 10px;
 }
 #rechercheBarre{
   background-color: #e2e2e2;
   margin: 0;
   padding-top: 1rem;
+  display: flex;
+  height: 4rem;
+  
 
 }
 select{
   margin: 5%;
-  height: 75%;
+  height: 70%;
+  width: 5rem;
+  text-align: center;
 }
-
