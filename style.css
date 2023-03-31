@@ -4,6 +4,12 @@
   --tertiary-color: #b7cece;
 }
 
+body {
+  margin: 0;
+}
+
+/* début menu burger filtre */
+
 .filtre {
   display: flex;
   flex-direction: column;
@@ -72,4 +78,15 @@
 
 #prix:not(:checked) > label:before {
   content: "€ ";
+}
+
+/* fin menu burger filtre */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  align-items: center;
+  padding: 0 10px;
+  border-top: solid 1px;
 }
