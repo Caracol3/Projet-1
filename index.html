@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>The spoon</title>
-</head>
-<body>
-    
-</body>
+  </head>
+    <main>
+    <header>
+      <nav>
+        <img src="ressources\the_spoon.png"
+        width="120"
+        height="90">
+
+    </header>
+        <div id="rechercheBarre">
+          <input type="search" placeholder="Recherche" />
+          <button>Rechercher</button>
+
+          <form action="#">
+            <label for="filt">filtre</label>
+            <select name="filtre" id="filt">
+              <option value="meilleurs note">meilleurs note</option>
+              <option value="distance">distance</option>
+              <option value="prix">prix</option>
+            </select>
+            <input type="submit" value="Submit" id="submit"/>
+          </form>
+        </div>
+    </nav>
+  </head>
+</main>
 </html>

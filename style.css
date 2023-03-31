@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+}
+header{
+  background-color: #456990;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: antiquewhite;
+}
+div {
+  display: flex;
+  margin: 1rem;
+}
+form {
+  margin-left: 2%;
+  margin-bottom: 10px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+}
+input, button{
+  margin-bottom: 10px;
+  width: 150px;
+  height: 30px;
+
+}
+#rechercheBarre{
+  background-color: #e2e2e2;
+  margin: 0;
+  padding-top: 1rem;
+
+}
+select{
+  margin: 5%;
+  height: 75%;
+}
+
