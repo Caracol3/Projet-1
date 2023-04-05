@@ -2,7 +2,10 @@
     --primary-color:#456990;
     --secondary-color:#e2e2e2;
     --tertiary-color: #b7cece;
-    --title-font: font-family: 'Pacifico', cursive;
+    --title-font-font family: font-family: 'Pacifico', cursive, sans-serif;
+    --font-font font-family: 'Pacifico', cursive,sans-serif;
+
+
 }
 
 *{
@@ -11,6 +14,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: 0;
+  
 }
 
 .profil {
@@ -19,6 +23,7 @@
     height: 300px;
     border:solid 1px;
     border-radius: 5px;
+  
     }
 
 .profil-h1{
@@ -26,6 +31,8 @@
     justify-content: space-around;
     align-items: center;
     border-bottom: solid 1px ;
+  
+   
 }
 
 .profil-img{
@@ -35,6 +42,7 @@
     background: var(--secondary-color);
     display: block;
     margin-bottom: 1rem;
+    
 }
 
 nav {
