@@ -1,145 +1,215 @@
 * {
   box-sizing: border-box;
   margin: 0%;
+  padding: 0%;
+}
+#logo{
+	width: auto;
+    height: 4rem;
+	margin-left: 45%;
 }
 header{
   background-color: #456990;
   height: 7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-h1 {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  color: antiquewhite;
-}
-div {
-  display: flex;
-  margin: 1rem;
-}
-form {
-  margin-left: 2%;
-  margin-bottom: 10px;
-  width: 150px;
-  display: flex;
-  align-items: center;
-}
-nav>input, button{
-  width: 6rem;
-  height: 30px;
-  background-color: #b7cece;
-  border-radius: 10px;
-}
+
 #rechercheBarre{
   background-color: #e2e2e2;
   margin: 0;
   padding-top: 1rem;
-  display: flex;
-  height: 4rem;
-  
+  height: 3rem;
 
 }
-select{
-  margin: 5%;
-  height: 70%;
-  width: 5rem;
+#filtre{
+  margin-left: 0%;
   text-align: center;
+  display: contents;
 }
 
-
-.hamburger {
-  position: absolute;
-  top: 5em;
-  right: 5%;
-  margin-left: -2em;
-  margin-top: -45px;
-  width: 2em;
-  height: 45px;
-  z-index: 5;
-}
-
-.hamburger div {
-  position: relative;
-  width: 3em;
-  height: 7px;
-  border-radius: 3px;
-  background-color: #f8982b;
-  margin-top: 8px;
-  transition: all 0.3s ease-in-out;
-}
-
-/**
-Nav Styles
-**/
-.nav {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #090E6B;
-  top: -100%; left: 0; right: 0; bottom: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  transform: scale(0);
-}
-.nav-wrapper {
-  position: relative;
-  overflow: hidden;
-  overflow-y: auto;
-  height: 100%;
-}
-nav {
-  text-align: left;
-  margin-left: 1%;
-}
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: #6ecddd;
-  font-size: 1.5em;
-  display: inline-block;
-  margin-top: 1.25em;
-  transition: color 0.2s ease-in-out;
-  letter-spacing: 1px;
-}
-nav a:before {
-  content: '';
-  height: 0;
-  position: absolute;
-  width: 0.25em;
-  background-color: white;
-  left: -0.5em;
-  transition: all 0.2s ease-in-out;
-}
-nav a:hover {
-  color: white;
-}
-nav a:hover:before {
-  height: 100%;
-}
-
-/**
-Animations
-**/
-#toggle:checked + .hamburger .top-bun {
-  transform: rotate(-45deg);
-  margin-top: 25px;
-}
-#toggle:checked + .hamburger .bottom-bun {
-  opacity: 0;
-  transform: rotate(45deg);
-}
-#toggle:checked + .hamburger .meat {
-  transform: rotate(45deg);
-  margin-top: -7px;
-}
-
-#toggle:checked + .hamburger + .nav {
-  top: 0;
-  transform: scale(1);
-}
-#toggle{
-  opacity: 0%;
-  margin: 0;
-}
+/* ******************** NAV BAR ******************** */
+.topnav {
+	background-color: #456990;
+	display: flex;
+	align-items: center;
+	width: 100%;
+  }
+  .topnav_link {
+	color: white;
+	padding: 12px;
+	text-decoration: none;
+  }
+  .topnav_link:hover {
+	color: #0078b4;
+  }
+  
+  /* hide responsive menu */
+  #topnav_hamburger_icon,
+  #topnav_responsive_menu {
+	display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+	/* hide classic menu */
+	#topnav_menu {
+	  display: none;
+	}
+  
+	/* position home link at left and hamburger at right */
+	#home_link {
+	  flex-grow: 1;
+	}
+  
+	/* disable horizontal scrolling  */
+	#root {
+	  position: relative;
+	  overflow-x: hidden;
+	}
+  
+	/* show responsive menu and position at the right of the screen */
+	#topnav_responsive_menu {
+	  display: block;
+	  position: absolute;
+	  margin: 0;
+	  right: 0;
+	  top: 0;
+	  width: 100vw;
+	  height: 100vh;
+  
+	  z-index: 99;
+  
+	  transform-origin: 0% 0%;
+	  transform: translate(200%, 0);
+  
+	  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+	}
+  
+	#topnav_responsive_menu ul {
+	  display: flex;
+	  flex-direction: column;
+  
+	  position: absolute;
+	  margin: 0;
+	  right: 0;
+	  top: 0;
+  
+	  min-width: 50vw;
+	  height: 100vh;
+	  padding: 56px 0 0;
+  
+	  text-align: center;
+  
+	  background: #ededed;
+	  list-style-type: none;
+	  -webkit-font-smoothing: antialiased;
+	}
+  
+	#topnav_responsive_menu li {
+	  padding: 12px 24px;
+	}
+  
+	#topnav_responsive_menu a {
+	  white-space: nowrap;
+	  color: #333;
+	  text-decoration: none;
+	}
+  
+	/* And let's slide it in from the right */
+	#topnav_responsive_menu.open {
+	  transform: none;
+	  position: fixed;
+	}
+  
+	/* ******************** HAMBURGER ICON ******************** */
+	/* define size and position of the hamburger link */
+	#topnav_hamburger_icon {
+	  display: block;
+	  position: relative;
+	  margin: 16px;
+	  width: 33px;
+	  height: 28px;
+  
+	  z-index: 100;
+  
+	  -webkit-user-select: none;
+	  user-select: none;
+	  cursor: pointer;
+	}
+  
+	/* define the style (size, color, position, animation, ...) of the 3 spans */
+	#topnav_hamburger_icon span {
+	  display: block;
+	  position: absolute;
+	  height: 4px;
+	  width: 100%;
+	  margin-bottom: 5px;
+  
+	  background: #ededed;
+	  border-radius: 3px;
+  
+	  z-index: 100;
+  
+	  opacity: 1;
+	  left: 0;
+  
+	  -webkit-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	  -webkit-transition: 0.25s ease-in-out;
+	  -moz-transition: 0.25s ease-in-out;
+	  -o-transition: 0.25s ease-in-out;
+	  transition: 0.25s ease-in-out;
+	}
+  
+	/* set the 3 spans position to look like a hamburger */
+	#topnav_hamburger_icon span:nth-child(1) {
+	  top: 0px;
+	  -webkit-transform-origin: left top;
+	  -moz-transform-origin: left top;
+	  -o-transform-origin: left top;
+	  transform-origin: left top;
+	}
+	#topnav_hamburger_icon span:nth-child(2) {
+	  top: 12px;
+	  -webkit-transform-origin: left center;
+	  -moz-transform-origin: left center;
+	  -o-transform-origin: left center;
+	  transform-origin: left center;
+	}
+	#topnav_hamburger_icon span:nth-child(3) {
+	  top: 24px;
+	  -webkit-transform-origin: left bottom;
+	  -moz-transform-origin: left bottom;
+	  -o-transform-origin: left bottom;
+	  transform-origin: left bottom;
+	}
+  
+	/* change color when opening the menu */
+	#topnav_hamburger_icon.open span {
+	  background: #333;
+	}
+  
+	/* the first span rotates 45° \ */
+	#topnav_hamburger_icon.open span:nth-child(1) {
+	  width: 110%;
+	  -webkit-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	}
+  
+	/* the second span disappears */
+	#topnav_hamburger_icon.open span:nth-child(2) {
+	  width: 0%;
+	  opacity: 0;
+	}
+  
+	/* the last span rotates -45° / */
+	#topnav_hamburger_icon.open span:nth-child(3) {
+	  width: 110%;
+	  -webkit-transform: rotate(-45deg);
+	  -moz-transform: rotate(-45deg);
+	  -o-transform: rotate(-45deg);
+	  transform: rotate(-45deg);
+	}
+  }

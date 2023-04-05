@@ -7,49 +7,48 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>The spoon</title>
   </head>
+  <script src="script.js"></script>
     <main>
     <header>
-      <nav>
-        <img id="logo" src="ressources\the_spoon2.png"
-        width="auto"
-        height="100">
-        <div>
-          
-
-
-
-          <h1><span style="font-size:2.75em;"></span><br></h1>
-
-          <input id="toggle" type="checkbox"></input>
-          
-          <label for="toggle" class="hamburger">
-            <div class="top-bun"></div>
-            <div class="meat"></div>
-            <div class="bottom-bun"></div>
-          </label>
-          
-          <div class="nav">
-            <div class="nav-wrapper">
-              <nav>
-                <a href="#">Profile</a><br>
-                <a href="#">Historique</a><br>
-                <a href="#">Préférence</a><br>
-                <a href="#">Deconection</a>
-              </nav>
-            </div>
+    
+        
+      
+        <div id="root">
+          <div id="topnav" class="topnav">
+            <a id="home_link" class="topnav_link" href="/"><img id="logo" src="ressources\the_spoon2.png "></a>
+        
+            <!-- Classic Menu -->
+            <nav role="navigation" id="topnav_menu">
+              <a class="topnav_link" href="/about">ABOUT</a>
+              <a class="topnav_link" href="/contact-us">CONTACT</a>
+            </nav>
+        
+            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+              <!-- Some spans to act as a hamburger -->
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+        
+            <!-- Responsive Menu -->
+            <nav role="navigation" id="topnav_responsive_menu">
+              <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/contact-us">CONTACT</a></li>
+                <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
+                <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
+              </ul>
+            </nav>
           </div>
-          
-          
-
-
-        </div>
-
+        </div
     </header>
+    <nav>
         <div id="rechercheBarre">
           <input type="search" placeholder="Recherche" />
           <button>Rechercher</button>
 
-          <form action="#">
+          <form action="#" id="filtre">
             <label for="filt">filtre</label>
             <select name="filtre">
               <option value="meilleurs note">meilleurs note</option>
