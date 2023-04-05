@@ -8,12 +8,13 @@
     <title>The spoon</title>
   </head>
   <body>
+    <script src="script.js"></script>
     <!-- filtres -->
 
     <!-- categories -->
 
     <section class="filtre">
-      <form>
+      <div class="categorie">
         <label for="categorie">Catégorie</label>
         <select name="categorie" id="categorie">
           <option value="fastfood">Fast Food</option>
@@ -24,7 +25,7 @@
           <option value="français">Français</option>
           <option value="gastronomique">Gastronomique</option>
         </select>
-      </form>
+      </div>
 
       <!-- star rating -->
 
@@ -59,28 +60,46 @@
       </div>
 
       <!--  livraison -->
-      <div class="checkbox">
+      <div class="checkbox livraison">
         <label for="livraison">Livraison</label>
         <input type="checkbox" name="livraison" id="livraison" />
       </div>
 
       <!-- à emporter -->
-      <div class="checkbox">
+      <div class="checkbox emporter">
         <label for="emporter">À emporter</label>
         <input type="checkbox" name="emporter" id="emporter" />
-      </div class=>
-      <!-- distance -->
-      <div class="checkbox">
-        <label for="distance">Distance</label>
-        <input type="range" name="distance" id="distance" />
       </div>
+
+      <!-- distance -->
+      <div class="distance">
+        <label for="distance">Distance</label>
+        <input
+          type="range"
+          name="distance"
+          id="distance"
+          list="markers"
+          min="0"
+          max="4"
+          step="1"
+        />
+        <datalist id="markers">
+          <p>(km)</p>
+          <option value="0" label="1"></option>
+          <option value="1" label="2"></option>
+          <option value="2" label="5"></option>
+          <option value="3" label="10"></option>
+          <option value="4" label="15"></option>
+        </datalist>
+      </div>
+
       <!-- hallal -->
-      <div class="checkbox">
+      <div class="checkbox hallal">
         <label for="hallal">Hallal</label>
         <input type="checkbox" name="hallal" id="hallal" />
       </div>
       <!-- végétarien -->
-      <div class="checkbox">
+      <div class="checkbox vege">
         <label for="vege">Végétarien</label>
         <input type="checkbox" name="vege" id="vege" />
       </div>
@@ -90,7 +109,11 @@
 
     <footer>
       <p>&copy2023 The SPOON</p>
-      <img src="#" alt="logo The SPOON">
+      <img src="ressources/the_spoon.png" alt="logo The SPOON" />
+      <ul>
+        <li>A propos</li>
+        <li>Contact</li>
+      </ul>
     </footer>
   </body>
 </html>
