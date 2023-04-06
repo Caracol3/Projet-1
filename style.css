@@ -17,22 +17,30 @@ body {
 .bon_plan {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 #bon_plan {
   background-color: var(--secondary-color);
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 0.5rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 0;
 }
 
-.brasserie {
+main img {
   margin: 3%;
   align-items: center;
   border-radius: 0.5rem;
 }
+
+/* .bon_plan_img {
+  margin: 2%;
+  align-items: center;
+  border-radius: 0.5rem;
+} */
 
 .bon_plan_article {
   display: flex;
@@ -43,52 +51,55 @@ p {
   padding: 0.5rem;
 }
 
-.near {
-  max-width: 93%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 90%;
-  gap: 10px;
+.category {
+  display: flex;
+  flex-direction: column;
 }
 
-.near > h2 {
-  grid-column: 1/-1;
-  grid-row: 1/2;
-  max-width: 70%;
-  border-radius: 0.5rem;
-  text-align: left;
-}
-
-h2 {
+h3 {
   background-color: var(--secondary-color);
-  text-align: center;
-  max-width: 30%;
   border-radius: 0.5rem;
-}
-
-.near_img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-}
-
-.pizzeria,
-.restaurant {
-  background-color: var(--secondary-color);
-  width: 100%;
-  max-width: 100%;
-  border-radius: 0.5rem;
+  padding: 2%;
   margin: 0.5rem;
-  margin-bottom: 5rem;
-  padding: 0.5rem;
+  align-self: flex-start;
+  max-width: auto;
+}
+
+.category_div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+  justify-content: space-between;
+}
+
+.category_section {
+  background-color: var(--secondary-color);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  justify-content: space-between;
+}
+
+.category_article {
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section img {
+  height: 40%;
 }
 
 .button {
-  align-self: self-end;
   margin: 0.5rem;
-  align-items: end;
+  align-self: flex-end;
 }
 
 button {
+  font-size: 0.5rem;
   padding: 10px 0.4rem;
   border-radius: 50px;
   border: 0;
@@ -98,13 +109,14 @@ button {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all 0.5s ease;
+  align-self: self-end;
 }
 
 button:hover {
   letter-spacing: 3px;
-  background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
 button:active {
