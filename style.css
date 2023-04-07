@@ -14,12 +14,18 @@ body {
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 400px;
+  height: 450px;
   background-color: var(--tertiary-color);
   justify-content: space-around;
   border: solid 1px;
   border-radius: 5px;
   padding-left: 5px;
+}
+
+.filtre button {
+  width: 75px;
+  align-self: end;
+  margin-right: 20px;
 }
 
 .rate {

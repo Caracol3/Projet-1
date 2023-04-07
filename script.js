@@ -3,11 +3,12 @@ function filter() {
     let popularity = getRadioValue("rate"); 
     let cost = getRadioValue("prix");
     let delivery = document.getElementById("livraison").checked;
-    let takeOut = document.getElementById("emporter").checked;
+    let takeAway = document.getElementById("emporter").checked;
     let distance = document.getElementById("distance").value;
     let hallal = document.getElementById("hallal").checked;
     let vege = document.getElementById("vege").checked;
 
+    
 }
 
 
