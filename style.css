@@ -142,21 +142,16 @@ button:active {
   padding-left: 5px;
 }
 
-.filtre button {
-  width: 75px;
-  align-self: end;
-  margin-right: 20px;
-}
-
 .rate {
   display: flex;
   height: 20px;
 }
 
 .rate p {
-  padding-right: 20px;
+  padding: 0 20px 0 0;
   display: inline-block;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .checkbox {
@@ -164,14 +159,23 @@ button:active {
   grid-template-columns: 1fr 1fr;
 }
 
+.distance  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .distance input{
   vertical-align: middle;
   width: 125px;
 }
 
+.distance p {
+  padding: 0;
+}
+
 datalist {
   display: grid;
-  grid-template-columns: 63px 27px 27px 25px 27px 27px;
+  grid-template-columns: 65px 28px 27px 23px 27px 27px;
 }
 
 datalist p {
@@ -218,6 +222,12 @@ datalist p {
 
 #prix:not(:checked) > label:before {
   content: "€ ";
+}
+
+.filtre button {
+  width: 75px;
+  align-self: end;
+  margin-right: 20px;
 }
 
 /* fin menu burger filtre */

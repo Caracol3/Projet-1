@@ -32,10 +32,10 @@
 
     <!--Début de la première catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_near">
       <h3>Proches de chez vous</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="near1">
           <img class=category_img src="ressources/food.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -46,7 +46,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="near2">
           <img class=category_img src="ressources/food_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -57,15 +57,15 @@
           </article>
         </section>
       </div>
-
+    </section>
     <!--Fin de la première catégorie de restaurant-->
 
     <!--Début de la deuxième catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_italian">
       <h3>Italien</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="italian1">
           <img class=category_img src="ressources/italian.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -76,7 +76,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="italian2">
           <img class=category_img src="ressources/italian_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -93,10 +93,10 @@
 
     <!--Début de la troisième catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_asian">
       <h3>Asiatique</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="asian1">
           <img class=category_img src="ressources/asiatique.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -107,7 +107,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="asian2">
           <img class=category_img src="ressources/asiatique_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -124,10 +124,10 @@
 
     <!--Début de la quatrième catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_fastfood">
       <h3>Fastfood</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="fastfood1">
           <img class=category_img src="ressources/fastfood.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -138,7 +138,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="fastfood2">
           <img class=category_img src="ressources/fastfood_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -155,10 +155,10 @@
 
     <!--Début de la cinquième catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_french">
       <h3>Français</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="french1">
           <img class=category_img src="ressources/français.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -169,7 +169,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="french2">
           <img class=category_img src="ressources/français_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -186,10 +186,10 @@
 
     <!--Début de la sixième catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_texmex">
       <h3>Texmex</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="texmex1">
           <img class=category_img src="ressources/tex_mex.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -199,7 +199,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="texmex2">
           <img class=category_img src="ressources/tex_mex_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -215,10 +215,10 @@
 
     <!--Début de la septième catégorie de restaurant-->
 
-    <section class="category">
+    <section class="category" id="tag_gourmet">
       <h3>Gastronomique</h3>
       <div class="category_div">
-        <section class="category_section">
+        <section class="category_section" id="gourmet1">
           <img class=category_img src="ressources/gastronomique_01.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -228,7 +228,7 @@
           </article>
         </section>
 
-        <section class="category_section">
+        <section class="category_section" id="gourmet2">
           <img class=category_img src="ressources/gastronomique_02.jpg" alt="food">
           <article class="category_article">
             <p>
@@ -252,15 +252,15 @@
 
   <section class="filtre">
     <form>
-      <label for="categorie">Catégorie</label>
-      <select name="categorie" id="categorie">
+      <label for="category">Catégorie</label>
+      <select name="category" id="category">
+        <option value="all">Toutes</option>
         <option value="fastfood">Fast Food</option>
-        <option value="japonais">Japonais</option>
-        <option value="chinois">Chinois</option>
-        <option value="mexicain">Mexicain</option>
-        <option value="italien">Italien</option>
-        <option value="français">Français</option>
-        <option value="gastronomique">Gastronomique</option>
+        <option value="asian">Asiatique</option>
+        <option value="texmex">Tex Mex</option>
+        <option value="italian">Italien</option>
+        <option value="french">Français</option>
+        <option value="gourmet">Gastronomique</option>
       </select>
     </form>
 
@@ -308,14 +308,22 @@
       <input type="checkbox" name="emporter" id="emporter" />
     </div class=>
     <!-- distance -->
-    <div class="checkbox">
+    <div class="distance">
       <label for="distance">Distance</label>
-      <input type="range" name="distance" id="distance" />
+      <input type="range" name="distance" id="distance" min="0" max="4" list="markers"/>
+      <datalist id="markers">
+        <p>(km)</p>
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">5</option>
+        <option value="3">10</option>
+        <option value="4">15</option>
+      </datalist>
     </div>
     <!-- hallal -->
     <div class="checkbox">
-      <label for="hallal">Hallal</label>
-      <input type="checkbox" name="hallal" id="hallal" />
+      <label for="halal">Halal</label>
+      <input type="checkbox" name="halal" id="halal" />
     </div>
     <!-- végétarien -->
     <div class="checkbox">
@@ -330,7 +338,7 @@
 
   <footer>
     <p>&copy2023 The SPOON</p>
-    <img src="#" alt="logo The SPOON">
+    <img src="ressources/the_spoon.png" alt="logo The SPOON">
   </footer>
 </body>
 
