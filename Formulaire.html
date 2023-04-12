@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire/ajout d'un restaurant</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="styleform.css">
 </head>
 <body>
-    <head>
+    <header>
         <h1>Ajouter un restaurant</h1>
-    </head>
+    </header>
 
     <!-- Nom du restaurant -->
    
@@ -29,13 +29,13 @@
 <!-- Adresse mail -->
 <div class="other">
 <label for="Mail"> Votre Email</label>
-<input type="email" name="mail" id="mail">
+<input type="email" name="mail" id="mail" placeholder="nom@domaine">
 </div>
 
 <!--ajouter une photo-->
 
 <div class="other">
-<label for="photo">Image du restaurant</label>
+<label for="photo">Photo</label>
 <input type="file" name="photo" id="photo">
 
 </div>
@@ -52,48 +52,45 @@
         <label for="categorie">Catégorie</label>
         <select name="categorie" id="categorie">
           <option value="fastfood">Fast Food</option>
-          <option value="japonais">Japonais</option>
-          <option value="chinois">Chinois</option>
-          <option value="mexicain">Mexicain</option>
+          <option value="asiatique">Asiatique</option>
+          <option value="tex mex">Tex_mex</option>
           <option value="italien">Italien</option>
           <option value="français">Français</option>
           <option value="gastronomique">Gastronomique</option>
         </select>
   </form>
 
-  <!-- livraison -->
-        <div class="checkbox">
-            <label for="livraison">Livraison</label>
-            <input type="checkbox" name="livraison" id="livraison" />
-          </div>
- <!-- à emporter -->
- <div class="checkbox">
-    <label for="emporter">À emporter</label>
-    <input type="checkbox" name="emporter" id="emporter" />
-  </div class=>
-  
-  <!-- hallal -->
-  <div class="checkbox">
+
+   <!-- allergene -->
+   <div class="checkbox">
     <label for="hallal">Hallal</label>
     <input type="checkbox" name="hallal" id="hallal" />
-  </div>
-  <!-- végétarien -->
-  <div class="checkbox">
     <label for="vege">Végétarien</label>
     <input type="checkbox" name="vege" id="vege" />
   </div>
-</section>
+  
+  <!-- livraison ou à emporter -->
+        <div class="checkbox">
+            <label for="livraison">Livraison</label>
+            <input type="checkbox" name="livraison" id="livraison" />
+            <label for="emporter">À emporter</label>
+            <input type="checkbox" name="emporter" id="emporter" />
+          </div>
+
+ 
+ 
+  
 
 <div class="add-rest-div">
-    <button class="add-rest">Envoyer</button>
+    <button class="add-rest">S'inscrire</button>
 </div>
 <!-- footer -->
-
+<div class="div-footer">
 <footer>
   <p>&copy2023 The SPOON</p>
   <img src="#" alt="logo The SPOON">
 </footer>
-    
+</div>
 </body>
 </html>
 
