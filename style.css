@@ -56,7 +56,7 @@ header {
 	border-color: #f9d342;
 	outline: none;
   }
-  
+   
   form.search-form {
 	display: flex;
 	justify-content: center;
@@ -117,7 +117,7 @@ header {
 	color: #292826;
 	outline: 0;
   }
-  
+
 /* ******************** NAV BAR ******************** */
 .topnav {
   background-color: #456990;
