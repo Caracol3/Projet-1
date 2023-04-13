@@ -1,7 +1,19 @@
-* {
-  box-sizing: border-box;
-  margin: 0%;
-  padding: 0%;
+:root {
+
+    --primary-color:#456990;
+    --secondary-color:#e2e2e2;
+    --tertiary-color: #b7cece;
+    --font: 'Pacifico', cursive, sans-serif
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  
 }
 #logo {
   width: auto;
@@ -19,24 +31,17 @@ header {
   display: flex;
 
 }
-#monFiltre{
+#montri{
   margin-top: 1rem;
   margin-left: 2rem;
 }
-#filtre {
+#tri {
   text-align: center;
   display: contents;
 }
-/*test*/
-.wrapper {
-	display: flex;
-	justify-content: start;
-	align-items: start;
-  }
-  
 /*barre de recherche*/
   
-  input[type="search"] {
+input[type="search"] {
 	background-clip: padding-box;
 	background-color: white;
 	vertical-align: middle;
@@ -92,7 +97,7 @@ header {
 	overflow: hidden;
   }
   
-  .button {
+  #buttonSearch {
 	display: inline-block;
 	font-weight: 600;
 	font-size: 0.8rem;
@@ -109,16 +114,15 @@ header {
 	transition: all 0.2s;
   }
   
-  .button:hover,
-  .button:active,
-  .button:focus {
+  #buttonSearch:hover,
+  #buttonSearch:active,
+  #buttonSearch:focus {
 	cursor: pointer;
 	background: #d4b743;
 	color: #292826;
 	outline: 0;
   }
-
-/* ******************** NAV BAR ******************** */
+  /* ******************** NAV BAR ******************** */
 .topnav {
   background-color: #456990;
   display: flex;
@@ -304,4 +308,310 @@ header {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+}
+
+
+.profil {
+    background-color: var(--tertiary-color);
+    width: 200px;
+    height: 300px;
+    border:solid 1px;
+    border-radius: 5px;
+  
+    }
+
+.profil-h1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px ;
+  
+   
+}
+
+.profil-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    background: var(--secondary-color);
+    display: block;
+    margin-bottom: 1rem;
+    
+}
+
+nav {
+height: 225px;
+}
+
+.profil-ul {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+height: 100%;
+}
+
+.profil-li {
+
+height: 2.5rem;
+background-color: var(--secondary-color);
+width: 80%;
+}
+li{
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+.profil-a {
+    text-align: center;
+    display: block;
+    color: black;
+    width: 100%;
+ height: 100%;
+}
+
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  font-family: var(--font);
+}
+
+.bon_plan {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+#bon_plan {
+  background-color: var(--secondary-color);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+main img {
+  margin: 3%;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.bon_plan_article {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  padding: 0.5rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  padding: 2%;
+  margin: 0.5rem;
+  align-self: flex-start;
+  max-width: auto;
+}
+
+.category_div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+  justify-content: space-between;
+}
+
+.category_section {
+  background-color: var(--secondary-color);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 46%;
+  justify-content: space-between;
+}
+
+.category_article {
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin: 0.5rem;
+  align-self: flex-end;
+}
+
+button {
+  font-size: 0.5rem;
+  padding: 10px 0.4rem;
+  border-radius: 50px;
+  border: 0;
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  align-self: self-end;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  box-shadow: var(--primary-color) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+/* début menu burger filtre */
+
+.filtre {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 450px;
+  background-color: var(--tertiary-color);
+  justify-content: space-around;
+  border: solid 1px;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.rate {
+  display: flex;
+  height: 20px;
+}
+
+.rate p {
+  padding: 0 20px 0 0;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.distance  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.distance input{
+  vertical-align: middle;
+  width: 125px;
+}
+
+.distance p {
+  padding: 0;
+}
+
+datalist {
+  display: grid;
+  grid-template-columns: 65px 28px 27px 23px 27px 27px;
+}
+
+datalist p {
+  margin: 0;
+}
+
+#prix p {
+  padding-right: 30px;
+}
+/* CSS filtre note */
+
+.rate:not(:checked) > input {
+  display: none;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: whitesmoke;
+  transform: translate(0, -15px);
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #fac60a;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #e0b722;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c6a017;
+}
+
+/* CSS filtre euro  */
+
+#prix:not(:checked) > label:before {
+  content: "€ ";
+}
+
+.filtre button {
+  width: 75px;
+  align-self: end;
+  margin-right: 20px;
+}
+
+.checkbox_restaurant_hide {
+  display: none;
+}
+
+.restaurant_hide {
+  display: none;
+}
+
+/* fin menu burger filtre */
+
+/* début footer style */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  align-items: center;
+  padding: 0 10px;
+  border-top: solid 1px;
+}
+
+footer img {
+  width: 50px;
+}
+
+footer ul {
+  margin: auto 0;
+}
+
+footer ul li {
+  list-style: none;
 }
