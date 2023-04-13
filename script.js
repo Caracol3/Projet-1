@@ -9,7 +9,8 @@ class Restaurant {
     takeAway,
     distance,
     halal,
-    vege
+    vege,
+    filter
   ) {
     this.category = category;
     this.popularity = popularity;
@@ -19,29 +20,70 @@ class Restaurant {
     this.distance = distance;
     this.halal = halal;
     this.vege = vege;
+    this.filter = filter;
   }
 }
 
-const near1 = new Restaurant("", "", "", true, true, 0, false, true);
-const near2 = new Restaurant("", "", "", false, true, 0, false, true);
+const near1 = new Restaurant("", "", "", true, true, 0, false, true, []);
+const near2 = new Restaurant("", "", "", false, true, 0, false, true, []);
 
-const italian1 = new Restaurant("italian", 4, 2, true, true, 2, true, true);
-const italian2 = new Restaurant("italian", 5, 3, true, true, 1, true, true);
+const italian1 = new Restaurant("italian", 4, 2, true, true, 2, true, true, []);
+const italian2 = new Restaurant("italian", 5, 3, true, true, 1, true, true, []);
 
-const asian1 = new Restaurant("asian", 3, 2, true, true, 1, true, true);
-const asian2 = new Restaurant("asian", 4, 2, true, true, 2, true, true);
+const asian1 = new Restaurant("asian", 3, 2, true, true, 1, true, true, []);
+const asian2 = new Restaurant("asian", 4, 2, true, true, 2, true, true, []);
 
-const fastFood1 = new Restaurant("fastfood", 3, 1, false, true, 1, true, true);
-const fastFood2 = new Restaurant("fastfood", 2, 2, true, true, 2, true, true);
+const fastFood1 = new Restaurant(
+  "fastfood",
+  3,
+  1,
+  false,
+  true,
+  1,
+  true,
+  true,
+  []
+);
+const fastFood2 = new Restaurant(
+  "fastfood",
+  2,
+  2,
+  true,
+  true,
+  2,
+  true,
+  true,
+  []
+);
 
-const french1 = new Restaurant("french", 5, 4, false, false, 4, true, true);
-const french2 = new Restaurant("french", 4, 3, false, false, 2, true, true);
+const french1 = new Restaurant("french", 5, 4, false, false, 4, true, true, []);
+const french2 = new Restaurant("french", 4, 3, false, false, 2, true, true, []);
 
-const texmex1 = new Restaurant("texmex", 3, 3, false, true, 1, true, true);
-const texmex2 = new Restaurant("texmex", 4, 2, false, true, 2, true, true);
+const texmex1 = new Restaurant("texmex", 3, 3, false, true, 1, true, true, []);
+const texmex2 = new Restaurant("texmex", 4, 2, false, true, 2, true, true, []);
 
-const gourmet1 = new Restaurant("gourmet", 5, 5, false, false, 4, false, true);
-const gourmet2 = new Restaurant("gourmet", 4, 4, false, false, 3, true, true);
+const gourmet1 = new Restaurant(
+  "gourmet",
+  5,
+  5,
+  false,
+  false,
+  4,
+  false,
+  true,
+  []
+);
+const gourmet2 = new Restaurant(
+  "gourmet",
+  4,
+  4,
+  false,
+  false,
+  3,
+  true,
+  true,
+  []
+);
 
 const restaurantArr = [
   near1,
@@ -67,13 +109,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+let filterButton = document.querySelector("#filterButton");
+filterButton.addEventListener("click", () => {
+  filter();
+});
+
 function filter() {
   // Récupère options de filtre désirées
   let category = document.getElementById("category").value;
-  let popularity = getRadioValue("rate");
-  let cost = getRadioValue("prix");
-  let delivery = document.getElementById("livraison");
-  let takeAway = document.getElementById("emporter");
+  let popularity = document.querySelector(`input[name="rate"]:checked`).value;
+  let cost = document.querySelector(`input[name="prix"]:checked`).value;
+  let delivery = document.getElementById("delivery");
+  let takeAway = document.getElementById("takeAway");
   let distance = document.getElementById("distance").value;
   let halal = document.getElementById("halal");
   let vege = document.getElementById("vege");
@@ -112,46 +159,57 @@ function filter() {
 
   //Début itération entre chaque restaurant pour afficher ou non en fonction des options de tri
   for (let i = 0; i < categorySections.length; i++) {
-    // Affiche les restaurants dont note >= note minimum filtrée
-    if (parseInt(categorySections[i].dataset.popularity) >= popularity) {
-      categorySections[i].style.display = "flex";
-    } else if (parseInt(categorySections[i].dataset.popularity) < popularity) {
-      categorySections[i].style.display = "none";
+    let checkboxFilterArray = [];
+    if (categorySections[i].classList.contains("restaurant_hide")) {
+      categorySections[i].classList.toggle("restaurant_hide");
+    }
+    // Cache les restaurants dont note < note minimum filtrée
+    if (
+      parseInt(categorySections[i].dataset.popularity) < popularity &&
+      categorySections[i].classList.contains("restaurant_hide") === false
+    ) {
+      categorySections[i].classList.toggle("restaurant_hide");
     }
 
-    // Affiche les restaurants dont prix <= prix maximum filtrée
-    if (parseInt(categorySections[i].dataset.cost) <= cost) {
-      categorySections[i].style.display = "flex";
-    } else if (parseInt(categorySections[i].dataset.cost) > cost) {
-      categorySections[i].style.display = "none";
+    // Cache les restaurants dont prix > prix maximum filtrée
+    if (
+      parseInt(categorySections[i].dataset.cost) > cost &&
+      categorySections[i].classList.contains("restaurant_hide") === false
+    ) {
+      categorySections[i].classList.toggle("restaurant_hide");
     }
 
-    if (delivery.checked == true) {
-      if (categorySections[i].dataset.delivery === "true" && categorySections[i].style.display == "flex") {
-        categorySections[i].style.display = "flex";
-      } else if (categorySections[i].dataset.delivery !== "true") {
-        categorySections[i].style.display = "none";
-      }
-    } else {
-      categorySections[i].style.display = "flex";
+    checkboxFilterArray.push(checkboxFilter(delivery, categorySections, i));
+    checkboxFilterArray.push(checkboxFilter(takeAway, categorySections, i));
+
+    if (
+      parseInt(categorySections[i].dataset.distance) > distance &&
+      categorySections[i].classList.contains("restaurant_hide") === false
+    ) {
+      categorySections[i].classList.toggle("restaurant_hide");
     }
 
-    // Affiche les restaurants qui proposent la livraison si case cochée
-    // for (let i = 0; i < categorySections.length; i++) {
-    //   if (check() === true) {
-    //     if (categorySections[i].dataset.delivery == "true" && categorySections[i].style.display == "flex") {
-    //       categorySections[i].style.display = "flex";
-    //     } else if (categorySections[i].dataset.delivery == "false"){
-    //       categorySections[i].style.display = "none";
-    //     }
-    //   } else if (categorySections[i].style.display = "flex"){
-    //     categorySections[i].style.display = "flex"
-    //   }
-    // }
+    checkboxFilterArray.push(checkboxFilter(halal, categorySections, i));
+    checkboxFilterArray.push(checkboxFilter(vege, categorySections, i));
+
+    console.log(checkboxFilterArray);
+    if (
+      checkboxFilterArray.includes("hide") &&
+      categorySections[i].classList.contains("checkbox_restaurant_hide") ===
+        false
+    ) {
+      categorySections[i].classList.toggle("checkbox_restaurant_hide");
+    } else if (
+      (checkboxFilterArray.includes("hides") === false) &&
+      categorySections[i].classList.contains("checkbox_restaurant_hide")
+    ) {
+      categorySections[i].classList.toggle("checkbox_restaurant_hide");
+    }
+
+    //Un autre appel de checkboxFilter() fait réapparaître un élément déjà caché, à régler
   }
 }
 // Fonction injection de data dans les sections restaurant
-
 function addData(elementId, obj) {
   let element = document.getElementById(elementId);
   let keyArr = Object.keys(obj);
@@ -161,18 +219,22 @@ function addData(elementId, obj) {
   }
 }
 
-function getRadioValue(score) {
-  let listRadio = document.getElementsByName(score);
-
-  for (let i = 0; i < listRadio.length; i++) {
-    if (listRadio[i].checked) {
-      return listRadio[i].value;
-    }
-  }
-}
-
 function showCats(myArr) {
   for (let cats of myArr) {
     cats.style.display = "initial";
+  }
+}
+
+//Fonction vérification checkbox
+function checkboxFilter(checkbox, array, index) {
+  if (checkbox.checked == true) {
+    if (
+      array[index].dataset[checkbox.name] != "true" &&
+      array[index].classList.contains("checkbox_restaurant_hide") == false
+    ) {
+      return "hide";
+    } else {
+      return "show";
+    }
   }
 }

@@ -188,8 +188,7 @@ datalist p {
 /* CSS filtre note */
 
 .rate:not(:checked) > input {
-  position: absolute;
-  top: -9999px;
+  display: none;
 }
 .rate:not(:checked) > label {
   float: right;
@@ -228,6 +227,14 @@ datalist p {
   width: 75px;
   align-self: end;
   margin-right: 20px;
+}
+
+.checkbox_restaurant_hide {
+  display: none;
+}
+
+.restaurant_hide {
+  display: none;
 }
 
 /* fin menu burger filtre */
