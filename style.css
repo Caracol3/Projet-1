@@ -204,7 +204,7 @@ button:active {
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 400px;
+  height: 450px;
   background-color: var(--tertiary-color);
   justify-content: space-around;
   border: solid 1px;
@@ -218,14 +218,38 @@ button:active {
 }
 
 .rate p {
-  padding-right: 20px;
+  padding: 0 20px 0 0;
   display: inline-block;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .checkbox {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.distance  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.distance input{
+  vertical-align: middle;
+  width: 125px;
+}
+
+.distance p {
+  padding: 0;
+}
+
+datalist {
+  display: grid;
+  grid-template-columns: 65px 28px 27px 23px 27px 27px;
+}
+
+datalist p {
+  margin: 0;
 }
 
 #prix p {
@@ -234,8 +258,7 @@ button:active {
 /* CSS filtre note */
 
 .rate:not(:checked) > input {
-  position: absolute;
-  top: -9999px;
+  display: none;
 }
 .rate:not(:checked) > label {
   float: right;
@@ -270,7 +293,23 @@ button:active {
   content: "€ ";
 }
 
+.filtre button {
+  width: 75px;
+  align-self: end;
+  margin-right: 20px;
+}
+
+.checkbox_restaurant_hide {
+  display: none;
+}
+
+.restaurant_hide {
+  display: none;
+}
+
 /* fin menu burger filtre */
+
+/* début footer style */
 
 footer {
   display: flex;
@@ -281,3 +320,14 @@ footer {
   border-top: solid 1px;
 }
 
+footer img {
+  width: 50px;
+}
+
+footer ul {
+  margin: auto 0;
+}
+
+footer ul li {
+  list-style: none;
+}
