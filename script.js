@@ -6,7 +6,7 @@ class Restaurant {
     popularity,
     cost,
     delivery,
-    takeAway,
+    takeaway,
     distance,
     halal,
     vege,
@@ -16,7 +16,7 @@ class Restaurant {
     this.popularity = popularity;
     this.cost = cost;
     this.delivery = delivery;
-    this.takeAway = takeAway;
+    this.takeaway = takeaway;
     this.distance = distance;
     this.halal = halal;
     this.vege = vege;
@@ -120,7 +120,7 @@ function filter() {
   let popularity = document.querySelector(`input[name="rate"]:checked`).value;
   let cost = document.querySelector(`input[name="prix"]:checked`).value;
   let delivery = document.getElementById("delivery");
-  let takeAway = document.getElementById("takeAway");
+  let takeaway = document.getElementById("takeaway");
   let distance = document.getElementById("distance").value;
   let halal = document.getElementById("halal");
   let vege = document.getElementById("vege");
@@ -180,7 +180,7 @@ function filter() {
     }
 
     checkboxFilterArray.push(checkboxFilter(delivery, categorySections, i));
-    checkboxFilterArray.push(checkboxFilter(takeAway, categorySections, i));
+    checkboxFilterArray.push(checkboxFilter(takeaway, categorySections, i));
 
     if (
       parseInt(categorySections[i].dataset.distance) > distance &&
