@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #456990;
+  --secondary-color: #e2e2e2;
+  --tertiary-color: #b7cece;
+}
+html {
+  height: 100%;
+}
+body {
+  background-color: var(--tertiary-color);
+  max-width: 100%;
+  height: 100%;
+}
+h1 {
+  border-bottom: solid 1px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.checkbox {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.add-rest-div {
+  text-align: right;
+  padding-bottom: 1rem;
+}
+form {
+  height: 2.5rem;
+}
+.other {
+  height: 2.5rem;
+}
+
+.add-rest {
+  border-radius: 5px;
+  border-color: #456990;
+  background-color: var(--secondary-color);
+}
+.add-rest:hover {
+  background-color: var(--tertiary-color);
+}
+
+footer {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  align-items: center;
+  padding: 0 10px;
+  border-top: solid 1px;
+}
