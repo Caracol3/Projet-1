@@ -4,15 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>The spoon</title>
-  </head>
+    </head>
     
 
 <!--partie body début-->
 
 <body>
+    <header>
+
+        <div id="root">
+          <div id="topnav" class="topnav">
+            <a id="home_link" class="topnav_link" href="/"><img id="logo" src="ressources\the_spoon2.png "></a>
+        
+            <!-- Classic Menu -->
+            <nav role="navigation" id="topnav_menu">
+              <a class="topnav_link" href="/about">ABOUT</a>
+              <a class="topnav_link" href="/contact-us">CONTACT</a>
+            </nav>
+        
+            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+
+              <!-- Some spans to act as a hamburger -->
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+        
+            <!-- Responsive Menu -->
+            <nav role="navigation" id="topnav_responsive_menu">
+              <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">FAVORIS</a></li>
+                <li><a href="/contact-us">CONTACT</a></li>
+                <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
+                <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
     
+    <nav>
+        <div id="rechercheBarre">
+          <!--<input type="search" placeholder="Recherche" />
+          <button>Recherche</button>-->
+          <div class="wrapper">
+            <div class="container">
+              <form role="search" method="get" class="search-form form" action="">
+                <label>
+                    <span class="screen-reader-text">Search for...</span>
+                    <input type="search" class="search-field" placeholder="Recherche..." value="" name="s" title="" />
+                </label>
+                <input type="image" src="ressources\icons8-chercher-65.png" class="search-submit" id="buttonSearch" value="" />
+            </form>
+            </div>
+          </div> 
+          <div id="montri">                                                                                                                                                                               
+
+          <form action="#" id="tri">  
+            <select name="tri">
+              <option value="meilleurs note">meilleurs note</option>
+              <option value="distance">distance</option>
+              <option value="prix">prix</option>
+            </select>
+            <input type="submit" value="Submit" id="submit"/>
+          </form>
+        </div> 
+        </div>
+        
+    </nav>
+  </header>
+  
 <section class="profil">
 <h1 class="profil-h1" > Mon profil:
     <ul class="profil-titre"><li class="titre"><a  href="#">
@@ -348,7 +411,7 @@
 
   <footer>
     <p>&copy2023 The SPOON</p>
-    <img src="ressources/the_spoon.png" alt="logo The SPOON">
+    <img src="ressources/the_spoon2.png" alt="logo The SPOON">
   </footer>
   <script src="script.js"></script>
 </body>
