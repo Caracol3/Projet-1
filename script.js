@@ -215,7 +215,7 @@ function filter() {
     ) {
       categorySections[i].classList.toggle("checkbox_restaurant_hide");
     } else if (
-      (checkboxFilterArray.includes("hides") === false) &&
+      checkboxFilterArray.includes("hides") === false &&
       categorySections[i].classList.contains("checkbox_restaurant_hide")
     ) {
       categorySections[i].classList.toggle("checkbox_restaurant_hide");
