@@ -220,8 +220,6 @@ function filter() {
     ) {
       categorySections[i].classList.toggle("checkbox_restaurant_hide");
     }
-
-    //Un autre appel de checkboxFilter() fait réapparaître un élément déjà caché, à régler
   }
 }
 // Fonction injection de data dans les sections restaurant
