@@ -1,3 +1,4 @@
+transition: scale(1.1);
 :root {
   --primary-color: #456990;
   --secondary-color: #e2e2e2;
@@ -393,11 +394,6 @@ main img {
   flex-direction: row;
 }
 
-#bon_plan2,
-#bon_plan3 {
-  display: none;
-}
-
 .bon_plan_img:nth-child(2),
 .bon_plan_img:nth-child(3) {
   display: none;
@@ -634,43 +630,20 @@ footer ul li {
     max-width: 33.3%;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #bon_plan_img:hover {
+    transition: transform 0.3s ease-in-out;
   }
 
   .bon_plan_img:nth-child(2),
   .bon_plan_img:nth-child(3) {
     display: block;
+    transition: scale(1.1);
   }
 
   .bon_plan_article button {
     display: none;
-  }
-
-  .category_div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .category_section {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .category_section img {
-    max-width: 55%;
-  }
-
-  .category_article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1.5rem;
   }
 }
