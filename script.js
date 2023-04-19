@@ -13,6 +13,17 @@ function showResponsiveMenu() {
   }
 }
 
+let linkFilter = document.getElementById("link-filter");
+let burgerFilter = document.getElementById("burger-filter");
+let filterMenu = document.querySelector(".div-filter");
+
+/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
+linkFilter.addEventListener("click", function (event) {
+  event.preventDefault();
+  burgerFilter.classList.toggle("open");
+  filterMenu.classList.toggle("open");
+});
+
 // Création classe d'objet restaurant
 
 class Restaurant {
@@ -42,8 +53,8 @@ class Restaurant {
 const near1 = new Restaurant("", "", "", true, true, 0, false, true, []);
 const near2 = new Restaurant("", "", "", false, true, 0, false, true, []);
 
-const italian1 = new Restaurant("italian", 4, 2, true, true, 2, true, true, []);
-const italian2 = new Restaurant("italian", 5, 3, true, true, 1, true, true, []);
+const italian1 = new Restaurant("italian", 4, 2, true, true, 2, true, true, []); //Création de chaque restaurant comme objet
+const italian2 = new Restaurant("italian", 5, 3, true, true, 1, true, true, []); //en utilisant la classe constructeur
 
 const asian1 = new Restaurant("asian", 3, 2, true, true, 1, true, true, []);
 const asian2 = new Restaurant("asian", 4, 2, true, true, 2, true, true, []);
@@ -101,6 +112,7 @@ const gourmet2 = new Restaurant(
 );
 
 const restaurantArr = [
+  //Création d'un tableau contenant chaque objets et leurs propriété
   near1,
   near2,
   italian1,
@@ -117,14 +129,16 @@ const restaurantArr = [
   gourmet2,
 ];
 
-const categorySections = document.getElementsByClassName("category_section");
+const categorySections = document.getElementsByClassName("category_section"); //Création d'un tableau récupérant chaque restaurant HTML
 document.addEventListener("DOMContentLoaded", function () {
+  //Au chargement de la page/du DOM...
   for (let i = 0; i < categorySections.length; i++) {
-    addData(categorySections[i].id, restaurantArr[i]);
-  }
+    //itération du tableau en passant sur chaque objet restaurant
+    addData(categorySections[i].id, restaurantArr[i]); //appel de la fonction addData en passant comme argument l'id
+  } //des restaurants HTML et les restaurants dans le tableau JS
 });
 
-let filterButton = document.querySelector("#filterButton");
+let filterButton = document.querySelector("#filterButton"); //Au clique sur le bouton du menu filtre, appelle la fonction filter()
 filterButton.addEventListener("click", () => {
   filter();
 });
@@ -167,18 +181,19 @@ function filter() {
     case "gourmet":
       document.getElementById("tag_gourmet").style.display = "initial";
       break;
-    default:
+    default: //Affiche toutes les catégories sur aucune n'ait choisis pour le filtre
       showCats(categoryArr);
       break;
   }
 
   //Début itération entre chaque restaurant pour afficher ou non en fonction des options de tri
   for (let i = 0; i < categorySections.length; i++) {
-    let checkboxFilterArray = [];
+    let checkboxFilterArray = []; //Création d'un tableau checkboxFilterArray permettant de stocker les valeurs "hide" ou "show" en fonction de
     if (categorySections[i].classList.contains("restaurant_hide")) {
+      //si on veut cacher ou non un élément plus tard
       categorySections[i].classList.toggle("restaurant_hide");
     }
-    // Cache les restaurants dont note < note minimum filtrée
+    // Cache les restaurants dont note < note minimum filtré
     if (
       parseInt(categorySections[i].dataset.popularity) < popularity &&
       categorySections[i].classList.contains("restaurant_hide") === false
@@ -186,7 +201,7 @@ function filter() {
       categorySections[i].classList.toggle("restaurant_hide");
     }
 
-    // Cache les restaurants dont prix > prix maximum filtrée
+    // Cache les restaurants dont prix > prix maximum filtré
     if (
       parseInt(categorySections[i].dataset.cost) > cost &&
       categorySections[i].classList.contains("restaurant_hide") === false
@@ -194,11 +209,11 @@ function filter() {
       categorySections[i].classList.toggle("restaurant_hide");
     }
 
-    checkboxFilterArray.push(checkboxFilter(delivery, categorySections, i));
-    checkboxFilterArray.push(checkboxFilter(takeaway, categorySections, i));
-
+    checkboxFilterArray.push(checkboxFilter(delivery, categorySections, i)); //Appel de la fonction checkboxFilter et utilisation du tableau
+    checkboxFilterArray.push(checkboxFilter(takeaway, categorySections, i)); //checkboxFilterArray[], ajoutant la valeur "hide" ou "show"
+    //dans le tableau selon le retour de la fonction
     if (
-      parseInt(categorySections[i].dataset.distance) > distance &&
+      parseInt(categorySections[i].dataset.distance) > distance && //Cache les restaurants dont distance > distance voulue
       categorySections[i].classList.contains("restaurant_hide") === false
     ) {
       categorySections[i].classList.toggle("restaurant_hide");
@@ -209,16 +224,17 @@ function filter() {
 
     console.log(checkboxFilterArray);
     if (
+      //Utilisation du tableau checkboxFilterArray
       checkboxFilterArray.includes("hide") &&
-      categorySections[i].classList.contains("checkbox_restaurant_hide") ===
-        false
+      categorySections[i].classList.contains("checkbox_restaurant_hide") === //Si le tableau comporte "hide" pour un restaurant et que
+        false //et que le restaurant HTML ne possède PAS la class pour cacher
     ) {
-      categorySections[i].classList.toggle("checkbox_restaurant_hide");
+      categorySections[i].classList.toggle("checkbox_restaurant_hide"); //Lui ajoute la class .checkbox_restaurant_hide pour cacher
     } else if (
-      checkboxFilterArray.includes("hides") === false &&
-      categorySections[i].classList.contains("checkbox_restaurant_hide")
+      checkboxFilterArray.includes("hides") === false && //Si le tableau ne comporte PAS "hide" mais qu'il contient la class
+      categorySections[i].classList.contains("checkbox_restaurant_hide") //pour cacher
     ) {
-      categorySections[i].classList.toggle("checkbox_restaurant_hide");
+      categorySections[i].classList.toggle("checkbox_restaurant_hide"); //Lui enlève la classe afin de l'afficher
     }
 
     //Un autre appel de checkboxFilter() fait réapparaître un élément déjà caché, à régler
@@ -226,11 +242,12 @@ function filter() {
 }
 // Fonction injection de data dans les sections restaurant
 function addData(elementId, obj) {
-  let element = document.getElementById(elementId);
-  let keyArr = Object.keys(obj);
+  let element = document.getElementById(elementId); //Récupère les restaurants HTML selon leur id
+  let keyArr = Object.keys(obj); //Récupère les clés et valeurs des objets Restaurant et les stocks dans des tableaux
   let valuesArr = Object.values(obj);
   for (let i = 0; i < Object.keys(obj).length; i++) {
-    element.setAttribute("data-" + keyArr[i], valuesArr[i]);
+    //Itère en fonction du nombre de clé (de propriété par obj)
+    element.setAttribute("data-" + keyArr[i], valuesArr[i]); //Ajoute des dataset dans la balise HTML de chaque Restaurant HTML
   }
 }
 
@@ -244,8 +261,8 @@ function showCats(myArr) {
 function checkboxFilter(checkbox, array, index) {
   if (checkbox.checked == true) {
     if (
-      array[index].dataset[checkbox.name] != "true" &&
-      array[index].classList.contains("checkbox_restaurant_hide") == false
+      array[index].dataset[checkbox.name] != "true" && //Si la checkbox de tri est cochée (livraison, à emporter, halal, végé...)
+      array[index].classList.contains("checkbox_restaurant_hide") == false //Et si le restaurant HTML possède déjà la class checkbox_restaurant_hide
     ) {
       return "hide";
     } else {
