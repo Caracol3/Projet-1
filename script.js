@@ -253,3 +253,9 @@ function checkboxFilter(checkbox, array, index) {
     }
   }
 }
+
+/* retour du bouton du formulaire */
+
+function submitForm (){
+  alert("formulaire envoyé");
+};
