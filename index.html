@@ -14,36 +14,28 @@
 <body>
     <header>
 
-        <div id="root">
-          <div id="topnav" class="topnav">
-            <a id="home_link" class="topnav_link" href="/"><img id="logo" src="ressources\the_spoon2.png "></a>
-        
-            <!-- Classic Menu -->
-            <nav role="navigation" id="topnav_menu">
-              <a class="topnav_link" href="/about">ABOUT</a>
-              <a class="topnav_link" href="/contact-us">CONTACT</a>
-            </nav>
-        
-            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+      <div class="burger_menu">
 
-              <!-- Some spans to act as a hamburger -->
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-        
-            <!-- Responsive Menu -->
-            <nav role="navigation" id="topnav_responsive_menu">
-              <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/about">FAVORIS</a></li>
-                <li><a href="/contact-us">CONTACT</a></li>
-                <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
-                <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
-              </ul>
-            </nav>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+      <ul class="menu" id="profil-ul">
+        <h1 class="profil-h1">Mon profil</h1>
+                <li class="profil-li"><a class="profil-a " href="/about">Mes paramètres</a></li>
+                <li class="profil-li"><a class="profil-a" href="/contact-us">Mes favoris</a></li>
+                <li class="profil-li"><a class="profil-a" href="/privacy-policy">Mon panier</a></li>
+      </ul>
+      <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class=" material-icons closeIcon">close</i>
+      </button>
+
+    </div>
+       <div id="root">
+          <div id="topnav" class="topnav">
+            <a><img id="logo" src="ressources\the_spoon2.png "></a>
           </div>
-        </div>
     
     <nav>
         <div id="rechercheBarre">
@@ -76,26 +68,7 @@
     </nav>
   </header>
   
-<section class="profil">
-<h1 class="profil-h1" > Mon profil:
-    <ul class="profil-titre"><li class="titre"><a  href="#">
-     <img src="https://as2.ftcdn.net/v2/jpg/00/65/77/27/1000_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" alt="photo" class="profil-img">
-    </a></li></ul>
-</h1>
 
-
-<nav class="profil-nav">
-    <ul class="profil-ul">
-       
-        <li class="profil-li"><a class="profil-a" href="#">Mes paramètres</a></li>
-        
-        <li class="profil-li"><a class="profil-a" href="#">Mes favoris</a></li>
-        
-        <li class="profil-li"><a class="profil-a" href="#">Mon panier</a></li>
-    
- </ul>
-</nav>
-</section>
   <main>
 
     <section class="bon_plan">

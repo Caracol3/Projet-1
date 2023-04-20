@@ -1,17 +1,22 @@
-function showResponsiveMenu() {
-  let menu = document.getElementById("topnav_responsive_menu");
-  let icon = document.getElementById("topnav_hamburger_icon");
-  let root = document.getElementById("root");
-  if (menu.className === "") {
-    menu.className = "open";
-    icon.className = "open";
-    root.style.overflowY = "hidden";
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+closeIcon.style.display = "none";
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
   } else {
-    menu.className = "";
-    icon.className = "";
-    root.style.overflowY = "";
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
   }
 }
+
+hamburger.addEventListener("click", toggleMenu);
 
 // Création classe d'objet restaurant
 
@@ -215,7 +220,7 @@ function filter() {
     ) {
       categorySections[i].classList.toggle("checkbox_restaurant_hide");
     } else if (
-      (checkboxFilterArray.includes("hides") === false) &&
+      checkboxFilterArray.includes("hides") === false &&
       categorySections[i].classList.contains("checkbox_restaurant_hide")
     ) {
       categorySections[i].classList.toggle("checkbox_restaurant_hide");
