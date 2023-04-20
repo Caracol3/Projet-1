@@ -1,116 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>The spoon</title>
-    </head>
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>The spoon</title>
+</head>
+
 
 <!--partie body début-->
 
 <body>
-    <header>
+  <header>
 
-        <div id="root">
-          <div id="topnav" class="topnav">
-            <a id="home_link" class="topnav_link" href="/"><img id="logo" src="ressources\the_spoon2.png "></a>
-        
-            <!-- Classic Menu -->
-            <nav role="navigation" id="topnav_menu">
-              <a class="topnav_link" href="/about">ABOUT</a>
-              <a class="topnav_link" href="/contact-us">CONTACT</a>
-            </nav>
-        
-            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+    <div id="root">
+      <div id="topnav" class="topnav">
+        <a id="home_link" class="topnav_link" href="/"><img id="logo" src="ressources\the_spoon2.png "></a>
 
-              <!-- Some spans to act as a hamburger -->
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-        
-            <!-- Responsive Menu -->
-            <nav role="navigation" id="topnav_responsive_menu">
-              <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/about">FAVORIS</a></li>
-                <li><a href="/contact-us">CONTACT</a></li>
-                <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
-                <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
-              </ul>
-            </nav>
+        <!-- Classic Menu -->
+        <nav role="navigation" id="topnav_menu">
+          <a class="topnav_link" href="/about">ABOUT</a>
+          <a class="topnav_link" href="/contact-us">CONTACT</a>
+        </nav>
+
+        <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+
+          <!-- Some spans to act as a hamburger -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <!-- Responsive Menu -->
+        <nav role="navigation" id="topnav_responsive_menu">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">FAVORIS</a></li>
+            <li><a href="/contact-us">CONTACT</a></li>
+            <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
+            <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <nav>
+      <div id="rechercheBarre">
+        <!--<input type="search" placeholder="Recherche" />
+          <button>Recherche</button>-->
+        <div class="wrapper">
+          <div class="container">
+            <form role="search" method="get" class="search-form form" action="">
+              <label>
+                <span class="screen-reader-text">Search for...</span>
+                <input type="search" class="search-field" placeholder="Recherche..." value="" name="s" title="" />
+              </label>
+              <input type="image" src="ressources\icons8-chercher-65.png" class="search-submit" id="buttonSearch"
+                value="" />
+            </form>
           </div>
         </div>
-    
-    <nav>
-        <div id="rechercheBarre">
-          <!--<input type="search" placeholder="Recherche" />
-          <button>Recherche</button>-->
-          <div class="wrapper">
-            <div class="container">
-              <form role="search" method="get" class="search-form form" action="">
-                <label>
-                    <span class="screen-reader-text">Search for...</span>
-                    <input type="search" class="search-field" placeholder="Recherche..." value="" name="s" title="" />
-                </label>
-                <input type="image" src="ressources\icons8-chercher-65.png" class="search-submit" id="buttonSearch" value="" />
-            </form>
-            </div>
-          </div> 
-          <div id="montri">                                                                                                                                                                               
+        <div id="montri">
 
-          <form action="#" id="tri">  
+          <form action="#" id="tri">
             <select name="tri">
               <option value="meilleurs note">meilleurs note</option>
               <option value="distance">distance</option>
               <option value="prix">prix</option>
             </select>
-            <input type="submit" value="Submit" id="submit"/>
+            <input type="submit" value="Submit" id="submit" />
           </form>
-        </div> 
         </div>
-        
+      </div>
+
     </nav>
   </header>
-  
-<section class="profil">
-<h1 class="profil-h1" > Mon profil:
-    <ul class="profil-titre"><li class="titre"><a  href="#">
-     <img src="https://as2.ftcdn.net/v2/jpg/00/65/77/27/1000_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" alt="photo" class="profil-img">
-    </a></li></ul>
-</h1>
+
+  <section class="profil">
+    <h1 class="profil-h1"> Mon profil:
+      <ul class="profil-titre">
+        <li class="titre"><a href="#">
+            <img src="https://as2.ftcdn.net/v2/jpg/00/65/77/27/1000_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+              alt="photo" class="profil-img">
+          </a></li>
+      </ul>
+    </h1>
 
 
-<nav class="profil-nav">
-    <ul class="profil-ul">
-       
+    <nav class="profil-nav">
+      <ul class="profil-ul">
+
         <li class="profil-li"><a class="profil-a" href="#">Mes paramètres</a></li>
-        
+
         <li class="profil-li"><a class="profil-a" href="#">Mes favoris</a></li>
-        
+
         <li class="profil-li"><a class="profil-a" href="#">Mon panier</a></li>
-    
- </ul>
-</nav>
-</section>
+
+      </ul>
+    </nav>
+  </section>
   <main>
 
     <section class="bon_plan">
       <h3>Bon plan</h3>
       <div id="bon_plan">
-        <img class="bon_plan_img" src="ressources/traditionelle.jpg" alt="cuisinetraditionnelle">
+        <section id="bon_plan_img">
+          <img class="bon_plan_img" src="ressources/traditionelle.jpg" alt="cuisinetraditionnelle">
+          <img class="bon_plan_img" src="ressources/bon_plan_01.jpg" alt="cuisinetraditionnelle">
+          <img class="bon_plan_img" src="ressources/bon_plan_02.jpg" alt="cuisinetraditionnelle">
+        </section>
         <article class="bon_plan_article">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
             cum accusamus optio magnam unde, aspernatur dolorum , vero omnis dolores enim! Consequuntur, omnis
-            eaque.
+            eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati totam enim saepe mollitia,
+            inventore ratione cupiditate est ex pariatur aliquid earum eveniet dolore ut incidunt assumenda esse aperiam
+            deleniti?
           </p>
-          <a href="http://www.lafinemousse.fr/" class="button"><button>En savoir plus</button></a><br>
+          <div class="hidden_paragraph">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum , vero omnis dolores enim! Consequuntur, omnis
+              eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iusto consequuntur consectetur
+              dolore iste tenetur dolorum! Vitae, officia earum veritatis voluptate ratione eum fuga accusantium ipsum.
+              Consectetur exercitationem incidunt temporibus.
+            </p>
+          </div>
+          <a href="http://www.lafinemousse.fr/" class="button"><button>En savoir plus</button></a>
         </article>
-
+      </div>
     </section>
 
     <!--Début de la première catégorie de restaurant-->
@@ -122,9 +142,10 @@
           <img class=category_img src="ressources/food.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -132,11 +153,14 @@
           <img class=category_img src="ressources/food_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
+
+
       </div>
     </section>
     <!--Fin de la première catégorie de restaurant-->
@@ -150,9 +174,9 @@
           <img class=category_img src="ressources/italian.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum. </p>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -160,9 +184,10 @@
           <img class=category_img src="ressources/italian_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
       </div>
@@ -179,9 +204,10 @@
           <img class=category_img src="ressources/asiatique.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -189,9 +215,10 @@
           <img class=category_img src="ressources/asiatique_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
       </div>
@@ -208,9 +235,10 @@
           <img class=category_img src="ressources/fastfood.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -218,9 +246,10 @@
           <img class=category_img src="ressources/fastfood_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
       </div>
@@ -237,9 +266,10 @@
           <img class=category_img src="ressources/français.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -247,9 +277,10 @@
           <img class=category_img src="ressources/français_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
       </div>
@@ -266,9 +297,10 @@
           <img class=category_img src="ressources/tex_mex.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -276,9 +308,10 @@
           <img class=category_img src="ressources/tex_mex_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
       </div>
@@ -295,9 +328,10 @@
           <img class=category_img src="ressources/gastronomique_01.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
 
@@ -305,9 +339,10 @@
           <img class=category_img src="ressources/gastronomique_02.jpg" alt="food">
           <article class="category_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+              cum accusamus optio magnam unde, aspernatur dolorum.
             </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a><br>
+            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
         </section>
       </div>
@@ -349,7 +384,7 @@
       <label for="star3" title="3 étoiles"></label>
       <input type="radio" id="star2" name="rate" value="2" />
       <label for="star2" title="2 étoiltes"></label>
-      <input type="radio" id="star1" name="rate" value="1" checked/>
+      <input type="radio" id="star1" name="rate" value="1" checked />
       <label for="star1" title="1 étoile"></label>
     </div>
 
@@ -357,7 +392,7 @@
 
     <div class="rate" id="prix">
       <p>Prix</p>
-      <input type="radio" id="5euro" name="prix" value="5" checked/>
+      <input type="radio" id="5euro" name="prix" value="5" checked />
       <label for="5euro" title="5"></label>
       <input type="radio" id="4euro" name="prix" value="4" />
       <label for="4euro" title="4"></label>
