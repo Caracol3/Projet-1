@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #b97375;
-  --secondary-color: #e3d6de;
-  --tertiary-color: #f6f0ed;
+  --primary-color: linear-gradient(to top, #f0cb35, #c02425);
+  --secondary-color: hsla(48, 74%, 51%, 0.899);
+  --tertiary-color: #e65c00;
   --font: "dongle", "sans-serif";
 }
 
