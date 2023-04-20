@@ -1,53 +1,118 @@
 :root {
-  --primary-color: #456990;
-  --secondary-color: #e2e2e2;
-  --tertiary-color: #b7cece;
+  --primary-color: linear-gradient(to top, #f0cb35, #c02425);
+  --secondary-color: hsla(48, 74%, 51%, 0.899);
+  --tertiary-color: #e65c00;
+  --font: "Dongle", sans-serif;
 }
 html {
-  height: 100%;
+  height: 88%;
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 7%;
 }
 body {
   background-color: var(--tertiary-color);
   max-width: 100%;
   height: 100%;
 }
+main {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+.link-main-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 h1 {
   border-bottom: solid 1px;
-  text-align: center;
+  justify-content: center;
   padding-bottom: 1rem;
+  text-align: center;
 }
+
 .checkbox {
-  height: 2rem;
+  height: 1rem;
   display: flex;
   align-items: center;
+  padding-top: 1rem;
+}
+
+.checkbox input {
+  margin-right: 1rem;
 }
 
 .add-rest-div {
-  text-align: right;
-  padding-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
-form {
-  height: 2.5rem;
+button {
+  width: 10rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 .other {
   height: 2.5rem;
 }
-
-.add-rest {
+#add-rest {
   border-radius: 5px;
-  border-color: #456990;
+  border-color: var(--tertiary-color);
   background-color: var(--secondary-color);
 }
-.add-rest:hover {
+#add-rest:hover {
   background-color: var(--tertiary-color);
+  border-color: var(--secondary-color);
 }
-
 footer {
   bottom: 0;
   display: flex;
   justify-content: space-between;
-  background-color: #e2e2e2;
+  background-color: #c02425;
   align-items: center;
   padding: 0 10px;
   border-top: solid 1px;
+}
+footer img {
+  width: 50px;
+}
+
+.corps-formulaire {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  flex-direction: column;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  margin: auto;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-media {
+    display: flex;
+  }
+  .checkbox {
+    height: 100%;
+  }
+
+  .corps-formulaire {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    width: 80%;
+    margin: auto;
+    padding-top: 1rem;
+    margin-bottom: 2%;
+  }
 }

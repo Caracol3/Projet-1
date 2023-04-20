@@ -6,44 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire/ajout d'un restaurant</title>
     <link rel="stylesheet" href="styleform.css">
+  
 </head>
 <body>
+  <main>
     <header>
-        <h1>Ajouter un restaurant</h1>
+        <h1><a id="home_link" class="link-main-page" href="/"><img id="logo" src="ressources\the_spoon2.png "></a>
+          Ajouter votre restaurant</h1>
     </header>
 
     <!-- Nom du restaurant -->
-   
-     <div class="other">
+<form class="corps-formulaire">
+  <div class="other">
     
-<label for="name-restaurant">Nom du restaurant</label>
-<input type="text" name="name" id="name">
-</div>
+ <label for="name-restaurant">Nom du restaurant</label>
+ <input type="text" name="name" id="name" required>
+ </div>
 
 <!-- Adresse du restaurant -->
 <div class="other">
 <label for="adresse">Votre adresse</label>
-<input type="text" name="adresse" id="adresse">
+<input type="text" name="adresse" id="adresse" required>
 </div>
 
 <!-- Adresse mail -->
+
 <div class="other">
 <label for="Mail"> Votre Email</label>
-<input type="email" name="mail" id="mail" placeholder="nom@domaine">
+<input type="email" name="mail" id="mail" placeholder="nom@domaine" required>
 </div>
 
 <!--ajouter une photo-->
 
 <div class="other">
 <label for="photo">Photo</label>
-<input type="file" name="photo" id="photo">
+<input type="file" name="photo" id="photo" required>
 
 </div>
 
 <!--date d'ouverture-->
 <div class="other">
     <label for="date">Date d'ouverture</label>
-    <input type="date" name="date" id="date"> 
+    <input type="date" name="date" id="date" required> 
 
 </div>
 <!-- catégorie -->
@@ -53,14 +57,14 @@
         <select name="categorie" id="categorie">
           <option value="fastfood">Fast Food</option>
           <option value="asiatique">Asiatique</option>
-          <option value="tex mex">Tex_mex</option>
+          <option value="tex mex">Tex Mex</option>
           <option value="italien">Italien</option>
           <option value="français">Français</option>
           <option value="gastronomique">Gastronomique</option>
         </select>
   </form>
 
-
+<section class="checkbox-media">
    <!-- allergene -->
    <div class="checkbox">
     <label for="hallal">Hallal</label>
@@ -76,21 +80,20 @@
             <label for="emporter">À emporter</label>
             <input type="checkbox" name="emporter" id="emporter" />
           </div>
-
- 
- 
-  
-
+</section>
 <div class="add-rest-div">
-    <button class="add-rest">S'inscrire</button>
+    <button id="add-rest" onclick="submitForm()">S'inscrire</button>
 </div>
+</form>
+</main>
 <!-- footer -->
 <div class="div-footer">
 <footer>
   <p>&copy2023 The SPOON</p>
-  <img src="#" alt="logo The SPOON">
+  <img src="ressources/the_spoon2.png" alt="logo The SPOON">
 </footer>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
 
