@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #456990;
-  --secondary-color: #e2e2e2;
-  --tertiary-color: #b7cece;
-  --font: "Pacifico", cursive, sans-serif;
+  --primary-color: #b97375;
+  --secondary-color: #e3d6de;
+  --tertiary-color: #f6f0ed;
+  --font: "dongle", "sans-serif";
 }
 
 * {
@@ -360,7 +360,7 @@ li {
 }
 
 body {
-  background-color: var(--primary-color);
+  background: var(--tertiary-color);
   margin: 0;
   font-family: var(--font);
 }
@@ -412,13 +412,17 @@ p {
   padding: 0.5rem;
 }
 
+.hidden_paragraph {
+  display: none;
+}
+
 .category {
   display: flex;
   flex-direction: column;
 }
 
 h3 {
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   border-radius: 0.5rem;
   padding: 2%;
   margin: 0.5rem;
@@ -457,12 +461,13 @@ h3 {
 
 button {
   font-size: 0.5rem;
+  margin-right: 20px;
   padding: 10px 0.4rem;
   border-radius: 50px;
   border: 0;
   background-color: var(--primary-color);
-  color: whitesmoke;
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  color: #e4dfda;
+  box-shadow: rgb(0 0 0 / 40%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all 0.5s ease;
@@ -627,7 +632,47 @@ footer ul li {
   list-style: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #bon_plan_img {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .bon_plan_img:nth-child(2) {
+    display: block;
+  }
+
+  .category_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .category_section img {
+    max-width: 55;
+    max-height: 100%;
+    align-items: center;
+  }
+
+  .category_article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
   #bon_plan_img {
     display: flex;
     flex-direction: row;
@@ -654,23 +699,31 @@ footer ul li {
   .category_section {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   .category_section img {
     max-width: 55%;
+    max-height: 70%;
+    align-items: center;
   }
 
   .category_article {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 80px;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    padding: 0.5rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .hidden_paragraph {
+    display: inline;
   }
 }
