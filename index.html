@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>The spoon</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>The spoon</title>
+  </head>
 
 
-<!--partie body début-->
+  <!--partie body début-->
 
-<body>
-
+  <body>
     <header>
+    <div class="burger_menu">
 
-      <div class="burger_menu">
-
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    </head>
-    <body>
       <ul class="menu" id="profil-ul">
         <h1 class="profil-h1">Mon profil</h1>
                 <li class="profil-li"><a class="profil-a " href="/about">Mes paramètres</a></li>
@@ -39,41 +36,157 @@
             <a><img id="logo" src="ressources\the_spoon2.png "></a>
           </div>
     
-
-    <nav>
-      <div id="rechercheBarre">
-        <!--<input type="search" placeholder="Recherche" />
-          <button>Recherche</button>-->
-        <div class="wrapper">
-          <div class="container">
-            <form role="search" method="get" class="search-form form" action="">
-              <label>
-                <span class="screen-reader-text">Search for...</span>
-                <input type="search" class="search-field" placeholder="Recherche..." value="" name="s" title="" />
-              </label>
-              <input type="image" src="ressources\icons8-chercher-65.png" class="search-submit" id="buttonSearch"
-                value="" />
+      <nav>
+        <div id="rechercheBarre">
+          <div class="wrapper">
+            <div class="container">
+              <form
+                role="search"
+                method="get"
+                class="search-form form"
+                action=""
+              >
+                <label>
+                  <span class="screen-reader-text">Search for...</span>
+                  <input
+                    type="search"
+                    class="search-field"
+                    placeholder="Recherche..."
+                    value=""
+                    name="s"
+                    title=""
+                  />
+                </label>
+                <input
+                  type="image"
+                  src="ressources\icons8-chercher-65.png"
+                  class="search-submit"
+                  id="buttonSearch"
+                  value=""
+                />
+              </form>
+            </div>
+          </div>
+          
+          <div id="montri">
+            <form action="#" id="tri">
+              <select name="tri">
+                <option value="meilleurs note" class="tri-option">
+                  meilleurs note
+                </option>
+                <option value="distance" class="tri-option">distance</option>
+                <option value="prix">prix</option>
+              </select>
+              <input type="submit" value="Submit" id="submit" />
             </form>
           </div>
         </div>
-        <div id="montri">
+      </nav>
 
-          <form action="#" id="tri">
-            <select name="tri">
-              <option value="meilleurs note">meilleurs note</option>
-              <option value="distance">distance</option>
-              <option value="prix">prix</option>
+      <a id="link-filter" href="#"><span class="filter-icon"><img src="./ressources/outline_filter_alt_black_36dp.png" alt="filter_icon"></span></a>
+      <!-- filtres -->
+
+      <!-- categories -->
+      <div class="div-filter">
+        <section class="filtre">
+          <form>
+            <label for="category">Catégorie</label>
+            <select name="category" id="category">
+              <option value="all">Toutes</option>
+              <option value="fastfood">Fast Food</option>
+              <option value="asian">Asiatique</option>
+              <option value="texmex">Tex Mex</option>
+              <option value="italian">Italien</option>
+              <option value="french">Français</option>
+              <option value="gourmet">Gastronomique</option>
             </select>
-            <input type="submit" value="Submit" id="submit" />
           </form>
-        </div>
+
+          <!-- star rating -->
+
+          <div class="rate" id="note">
+            <p>Note</p>
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="5 étoiles"></label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="4 étoiles"></label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="3 étoiles"></label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="2 étoiltes"></label>
+            <input type="radio" id="star1" name="rate" value="1" checked />
+            <label for="star1" title="1 étoile"></label>
+          </div>
+          
+          <!-- prix -->
+
+          <div class="rate" id="prix">
+            <p>Prix</p>
+            <input type="radio" id="5euro" name="prix" value="5" checked />
+            <label for="5euro" title="5"></label>
+            <input type="radio" id="4euro" name="prix" value="4" />
+            <label for="4euro" title="4"></label>
+            <input type="radio" id="3euro" name="prix" value="3" />
+            <label for="3euro" title="3"></label>
+            <input type="radio" id="2euro" name="prix" value="2" />
+            <label for="2euro" title="2"></label>
+            <input type="radio" id="1euro" name="prix" value="1" />
+            <label for="1euro" title="1"></label>
+          </div>
+
+          <!--  livraison -->
+          <div class="checkbox">
+            <label for="delivery" class="label_filter">Livraison</label>
+            <input type="checkbox" name="delivery" id="delivery" />
+          </div>
+          
+          <!-- à emporter -->
+          <div class="checkbox">
+            <label for="takeaway" class="label_filter">À emporter</label>
+            <input type="checkbox" name="takeaway" id="takeaway" />
+          </div>
+          
+          <!-- distance -->
+          <div class="distance">
+            <label for="distance" id="distance_label">Distance</label>
+            <input
+              type="range"
+              name="distance"
+              id="distance"
+              min="0"
+              max="4"
+              list="markers"
+              value="4"
+            />
+            <datalist id="markers">
+              <p>(km)</p>
+              <option value="0">1</option>
+              <option value="1">2</option>
+              <option value="2">5</option>
+              <option value="3">10</option>
+              <option value="4">15</option>
+            </datalist>
+          </div>
+          
+          <!-- hallal -->
+          <div class="checkbox">
+            <label for="halal" class="label_filter">Halal</label>
+            <input type="checkbox" name="halal" id="halal" />
+          </div>
+          
+          <!-- végétarien -->
+          <div class="checkbox">
+            <label for="vege" class="label_filter">Végétarien</label>
+            <input type="checkbox" name="vege" id="vege" />
+          </div>
+
+          <button id="filterButton">Valider</button>
+        </section>
       </div>
-
-    </nav>
-  </header>
-
+      <!-- fin filtre -->
+    </header>
+    
   <main>
-
     <section class="bon_plan">
       <h3>Bon plan</h3>
       <div id="bon_plan">
@@ -226,10 +339,7 @@
       </div>
     </section>
 
-    <!--Fin de la quatrième catégorie de restaurant-->
-
-    <!--Début de la cinquième catégorie de restaurant-->
-
+<!-- Début de la cinquième catégorie de restaurant -->
     <section class="category" id="tag_french">
       <h3>Français</h3>
       <div class="category_div">
@@ -284,136 +394,51 @@
             </p>
             <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
           </article>
-        </section>
-      </div>
-    </section>
+        </div>
+      </section>
+      
+======================================
 
-    <!--Fin de la sixième catégorie de restaurant-->
+      <!--Début de la septième catégorie de restaurant-->
 
-    <!--Début de la septième catégorie de restaurant-->
+      <section class="category" id="tag_gourmet">
+        <h3>Gastronomique</h3>
+        <div class="category_div">
+          <section class="category_section" id="gourmet1">
+            <img
+              class="category_img"
+              src="ressources/gastronomique_01.jpg"
+              alt="food"
+            />
+            <article class="category_article">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="https://www.peppeparis.fr/" class="button"
+                ><button>En savoir plus</button></a
+              ><br />
+            </article>
+          </section>
 
-    <section class="category" id="tag_gourmet">
-      <h3>Gastronomique</h3>
-      <div class="category_div">
-        <section class="category_section" id="gourmet1">
-          <img class=category_img src="ressources/gastronomique_01.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
+          <section class="category_section" id="gourmet2">
+            <img
+              class="category_img"
+              src="ressources/gastronomique_02.jpg"
+              alt="food"
+            />
+            <article class="category_article">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="https://laconfidenteparis.fr/" class="button"
+                ><button>En savoir plus</button></a
+              ><br />
+            </article>
+          </section>
+        </div>
+      </section>
 
-        <section class="category_section" id="gourmet2">
-          <img class=category_img src="ressources/gastronomique_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-      </div>
-    </section>
+      <!--Fin de la septième catégorie de restaurant-->
+    </main>
 
-    <!--Fin de la septième catégorie de restaurant-->
-
-  </main>
-
-  <!--partie main fin-->
-
-  <!-- filtres -->
-
-  <!-- categories -->
-
-  <section class="filtre">
-    <form>
-      <label for="category">Catégorie</label>
-      <select name="category" id="category">
-        <option value="all">Toutes</option>
-        <option value="fastfood">Fast Food</option>
-        <option value="asian">Asiatique</option>
-        <option value="texmex">Tex Mex</option>
-        <option value="italian">Italien</option>
-        <option value="french">Français</option>
-        <option value="gourmet">Gastronomique</option>
-      </select>
-    </form>
-
-    <!-- star rating -->
-
-    <div class="rate" id="note">
-      <p>Note</p>
-      <input type="radio" id="star5" name="rate" value="5" />
-      <label for="star5" title="5 étoiles"></label>
-      <input type="radio" id="star4" name="rate" value="4" />
-      <label for="star4" title="4 étoiles"></label>
-      <input type="radio" id="star3" name="rate" value="3" />
-      <label for="star3" title="3 étoiles"></label>
-      <input type="radio" id="star2" name="rate" value="2" />
-      <label for="star2" title="2 étoiltes"></label>
-      <input type="radio" id="star1" name="rate" value="1" checked />
-      <label for="star1" title="1 étoile"></label>
-    </div>
-
-    <!-- prix -->
-
-    <div class="rate" id="prix">
-      <p>Prix</p>
-      <input type="radio" id="5euro" name="prix" value="5" checked />
-      <label for="5euro" title="5"></label>
-      <input type="radio" id="4euro" name="prix" value="4" />
-      <label for="4euro" title="4"></label>
-      <input type="radio" id="3euro" name="prix" value="3" />
-      <label for="3euro" title="3"></label>
-      <input type="radio" id="2euro" name="prix" value="2" />
-      <label for="2euro" title="2"></label>
-      <input type="radio" id="1euro" name="prix" value="1" />
-      <label for="1euro" title="1"></label>
-    </div>
-
-    <!--  livraison -->
-    <div class="checkbox">
-      <label for="delivery" class="label_filter">Livraison</label>
-      <input type="checkbox" name="delivery" id="delivery" />
-    </div>
-
-    <!-- à emporter -->
-    <div class="checkbox">
-      <label for="takeaway" class="label_filter">À emporter</label>
-      <input type="checkbox" name="takeaway" id="takeaway" />
-    </div class=>
-    <!-- distance -->
-    <div class="distance">
-      <label for="distance" id="distance_label">Distance</label>
-      <input type="range" name="distance" id="distance" min="0" max="4" list="markers" value="4"/>
-      <datalist id="markers">
-        <p>(km)</p>
-        <option value="0">1</option>
-        <option value="1">2</option>
-        <option value="2">5</option>
-        <option value="3">10</option>
-        <option value="4">15</option>
-      </datalist>
-    </div>
-    <!-- hallal -->
-    <div class="checkbox">
-      <label for="halal" class="label_filter">Halal</label>
-      <input type="checkbox" name="halal" id="halal" />
-    </div>
-    <!-- végétarien -->
-    <div class="checkbox">
-      <label for="vege" class="label_filter">Végétarien</label>
-      <input type="checkbox" name="vege" id="vege" />
-    </div>
-
-    <button id="filterButton">Valider</button>
-  </section>
-
-  <!-- fin filtre -->
+    <!--partie main fin-->
+ 
 <!-- début lien formulaire-->
 <input type="button" class="button-form" onclick="window.location.href = 'formulaire.html';" value="rejoignez nous" />
 <!-- fin lien formulaire-->
@@ -423,5 +448,4 @@
   </footer>
   <script src="script.js"></script>
 </body>
-
 </html>

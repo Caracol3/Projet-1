@@ -1,7 +1,8 @@
 :root {
-  --primary-color: #b97375;
-  --secondary-color: #e3d6de;
-  --tertiary-color: #f6f0ed;
+
+  --primary-color: linear-gradient(to top, #f0cb35, #c02425);
+  --secondary-color: hsla(48, 74%, 51%, 0.899);
+  --tertiary-color: #e65c00;
   --font: "dongle", "sans-serif";
 }
 
@@ -12,29 +13,52 @@
   list-style: none;
   box-sizing: border-box;
 }
+
 #logo {
   width: auto;
   height: 4rem;
   margin-left: 45%;
 }
+
 header {
-  background-color: #456990;
-  height: 7rem;
+  background-color: #c02425;
+  height: 9rem;
 }
 
 #rechercheBarre {
-  background-color: #e2e2e2;
+  background-color: var(--tertiary-color);
   margin: 0;
   display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
 }
-#montri {
-  margin-top: 1rem;
-  margin-left: 2rem;
-}
+
 #tri {
   text-align: center;
   display: contents;
 }
+
+#tri select {
+  height: 30px;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e5;
+}
+
+#submit {
+  height: 30px;
+  margin-left: 10px;
+  padding: 0 4px;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e5;
+}
+
+#montri {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 /*barre de recherche*/
 
 input[type="search"] {
@@ -53,8 +77,8 @@ input[type="search"] {
 
 input[type="search"]:focus {
   transition: all 0.5s;
-  box-shadow: 0 0 40px #f9d442b9;
-  border-color: #f9d342;
+  box-shadow: 0 0 40px rgba(249, 212, 66, 1);
+  border-color: #f0cb35;
   outline: none;
 }
 
@@ -70,13 +94,13 @@ label {
 
 input.search-field {
   margin-bottom: 0;
-  height: 51px;
+  height: 30px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 input.search-submit {
-  height: 51px;
+  height: 30px;
   margin: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -111,12 +135,12 @@ input.search-submit {
 #buttonSearch:active,
 #buttonSearch:focus {
   cursor: pointer;
-  background: #d4b743;
+  background: #f0cb35;
   color: #292826;
   outline: 0;
 }
-/* ******************** burger menu ******************** */
 
+/* ******************** burger menu ******************** */
 .hamburger {
   position: fixed;
   z-index: 100;
@@ -131,7 +155,6 @@ input.search-submit {
 .closeIcon {
   display: none;
 }
-
 
 .menu {
   position: fixed;
@@ -160,6 +183,7 @@ input.search-submit {
   height: 300px;
   border: solid 1px;
   border-radius: 5px;
+  margin-top: 50px;
 }
 
 #profil-ul {
@@ -188,6 +212,7 @@ input.search-submit {
   justify-content: space-around;
   align-items: center;
 }
+
 li {
   box-sizing: border-box;
   padding-top: 0.5rem;
@@ -207,7 +232,7 @@ li {
 }
 
 body {
-  background: var(--tertiary-color);
+  background: var(--primary-color);
   margin: 0;
   font-family: var(--font);
 }
@@ -226,6 +251,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 0;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 main img {
@@ -275,12 +301,13 @@ h3 {
   margin: 0.5rem;
   align-self: flex-start;
   max-width: auto;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .category_div {
   display: flex;
   flex-direction: row;
-  margin-top: 0;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
 
@@ -292,6 +319,7 @@ h3 {
   flex-direction: column;
   max-width: 46%;
   justify-content: space-between;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .category_article {
@@ -307,14 +335,15 @@ h3 {
 }
 
 button {
-  font-size: 0.5rem;
+
+  font-size: 0.7rem;
   margin-right: 20px;
   padding: 10px 0.4rem;
   border-radius: 50px;
   border: 0;
   background-color: var(--primary-color);
-  color: #e4dfda;
-  box-shadow: rgb(0 0 0 / 40%) 0 0 8px;
+  color: black;
+  box-shadow: rgb(0 0 0 / 15%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all 0.5s ease;
@@ -324,31 +353,59 @@ button {
 button:hover {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
-  color: var(--primary-color);
+  color: var(--secondary-color);
   box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
 button:active {
   letter-spacing: 3px;
-  background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
   transform: translateY(10px);
   transition: 100ms;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.category_section:hover {
+  transform: scale(1.05);
+}
+
+#bon_plan:hover {
+  transform: scale(1.02);
 }
 
 /* début menu burger filtre */
 
+#link-filter {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
+}
+
 .filtre {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 210px;
   height: 450px;
   background-color: var(--tertiary-color);
   justify-content: space-around;
   border: solid 1px;
   border-radius: 5px;
   padding-left: 5px;
+  z-index: 99;
+
+  position: relative;
+  bottom: -41px;
+  overflow: visible;
+}
+
+.div-filter {
+  display: none;
+}
+
+.div-filter.open {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .rate {
@@ -375,7 +432,7 @@ button:active {
 
 .distance input {
   vertical-align: middle;
-  width: 100px;
+  width: 110px;
 }
 
 #distance_label {
@@ -392,7 +449,7 @@ button:active {
 
 datalist {
   display: grid;
-  grid-template-columns: 89px 20px 22px 19px 21px 27px;
+  grid-template-columns: 89px 22px 24px 21px 23px 27px;
 }
 
 datalist p {
@@ -441,9 +498,9 @@ datalist p {
 }
 
 .filtre button {
-  width: 75px;
+  width: 80px;
   align-self: end;
-  margin-right: 20px;
+  background-color: var(--secondary-color);
 }
 
 .checkbox_restaurant_hide {
@@ -461,7 +518,7 @@ datalist p {
 footer {
   display: flex;
   justify-content: space-between;
-  background-color: #e2e2e2;
+  background-color: #c02425;
   align-items: center;
   padding: 0 10px;
   border-top: solid 1px;
@@ -573,6 +630,7 @@ footer ul li {
   .hidden_paragraph {
     display: inline;
   }
+  
 /* bouton lien-form */
 .button-form {
   font-size: 0.5rem;
