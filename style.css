@@ -45,7 +45,7 @@ header {
   border: 1px solid #e0e0e5;
 }
 
-#submit {
+.submit {
   height: 30px;
   margin-left: 10px;
   padding: 0 4px;
@@ -202,6 +202,7 @@ input.search-submit {
   align-items: center;
   border-bottom: solid 1px;
   color: black;
+  font-size: 2rem;
 }
 
 .profil-li {
@@ -228,6 +229,7 @@ li {
   background-color: var(--tertiary-color);
   border-radius: 1rem;
   margin-left: 0.5rem;
+  align-items: center;
 }
 
 body {
@@ -278,6 +280,7 @@ main img {
 .bon_plan_article {
   display: flex;
   flex-direction: column;
+  padding-bottom: 0.5rem;
 }
 
 p {
@@ -325,16 +328,20 @@ h3 {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 0.5rem;
 }
 
-.button {
+.button,
+button {
   margin: 0.5rem;
   align-self: flex-end;
 }
 
+.div-button,
 button,
 .button-form,
-#submit {
+
+.submit {
   font-size: 0.7rem;
   margin-right: 20px;
   padding: 10px 0.4rem;
@@ -349,6 +356,7 @@ button,
   align-self: self-end;
 }
 
+.div-button:hover,
 button:hover {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
@@ -356,6 +364,7 @@ button:hover {
   box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
+.div-button:active,
 button:active {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
@@ -363,6 +372,10 @@ button:active {
   transform: translateY(5px);
   transition: 100ms;
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.div-button a {
+  color: black;
 }
 
 .category_section:hover {
@@ -566,14 +579,16 @@ footer ul li a:visited {
 }
 
 .button-form:hover,
-#submit:hover {
+
+.submit:hover {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
   box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
 .button-form:active,
-#submit:active {
+
+.submit:active {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
@@ -644,7 +659,7 @@ footer ul li a:visited {
     display: block;
   }
 
-  .bon_plan_article button {
+  .bon_plan_article .div-button {
     display: none;
   }
 

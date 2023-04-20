@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>The spoon</title>
   </head>
-
 
   <!--partie body début-->
 
   <body>
     <header>
       <!-- Début Burger profil -->
-    <div class="burger_menu">
-
-      <ul class="menu" id="profil-ul">
-        <h1 class="profil-h1">Mon profil</h1>
-                <li class="profil-li"><a class="profil-a " href="/about">Mes paramètres</a></li>
-                <li class="profil-li"><a class="profil-a" href="/contact-us">Mes favoris</a></li>
-                <li class="profil-li"><a class="profil-a" href="/privacy-policy">Mon panier</a></li>
-      </ul>
+      <div class="burger_menu">
+        <ul class="menu" id="profil-ul">
+          <li class="profil-h1">Mon profil</li>
+          <li class="profil-li">
+            <a class="profil-a" href="/about">Mes paramètres</a>
+          </li>
+          <li class="profil-li">
+            <a class="profil-a" href="/contact-us">Mes favoris</a>
+          </li>
+          <li class="profil-li">
+            <a class="profil-a" href="/privacy-policy">Mon panier</a>
+          </li>
+        </ul>
+      </div>
       <button class="hamburger">
         <i class="menuIcon material-icons">menu</i>
-        <i class=" material-icons closeIcon">close</i>
+        <i class="material-icons closeIcon">close</i>
       </button>
-
       <!-- Fin Burger profil -->
 
-    </div>
-       <div id="root">
-          <div id="topnav" class="topnav">
-            <a><img id="logo" src="ressources\the_spoon2.png "></a>
-          </div>
-    
+      <div id="topnav" class="topnav">
+        <a
+          ><img id="logo" src="ressources/the_spoon2.png" alt="logo the Spoon"
+        /></a>
+      </div>
+
       <nav>
         <div id="rechercheBarre">
           <div class="wrapper">
             <div class="container">
-              <form
-                role="search"
-                method="get"
-                class="search-form form"
-                action=""
-              >
+              <form role="search" method="get" class="search-form form">
                 <label>
                   <span class="screen-reader-text">Search for...</span>
                   <input
@@ -61,15 +61,15 @@
                 </label>
                 <input
                   type="image"
-                  src="ressources\icons8-chercher-65.png"
+                  src="ressources/icons8-chercher-65.png"
+                  alt="search icon"
                   class="search-submit"
                   id="buttonSearch"
-                  value=""
                 />
               </form>
             </div>
           </div>
-          
+
           <div id="montri">
             <form action="#" id="tri">
               <select name="tri">
@@ -80,41 +80,45 @@
                 <option value="prix">Prix croissant</option>
                 <option value="prix">Prix décroissant</option>
               </select>
-              <input type="submit" value="Submit" id="submit" />
+              <input type="submit" value="Submit" class="submit" />
             </form>
           </div>
 
           <div id="montriradio">
             <form action="#" id="formTri">
               <div>
-              <input type="radio" name="tri" id="triNote">
-              <label for="triNote">Meilleur Note</label>
+                <input type="radio" name="tri" id="triNote" />
+                <label for="triNote">Meilleur Note</label>
               </div>
               <div>
-              <input type="radio" name="tri" id="triDistance">
-              <label for="triDistance">Distance</label>
+                <input type="radio" name="tri" id="triDistance" />
+                <label for="triDistance">Distance</label>
               </div>
               <div>
-              <input type="radio" name="tri" id="triPrix">
-              <label for="triPrix">Prix croissant</label>
+                <input type="radio" name="tri" id="triPrixCroissant" />
+                <label for="triPrixCroissant">Prix croissant</label>
               </div>
               <div>
-              <input type="radio" name="tri" id="triPrix">
-              <label for="triPrix">Prix décroissant</label>
+                <input type="radio" name="tri" id="triPrixDecroissant" />
+                <label for="triPrixDecroissant">Prix décroissant</label>
               </div>
-              <input type="submit" value="Submit" id="submit" />
+              <input type="submit" value="Submit" class="submit" />
             </form>
           </div>
-
         </div>
       </nav>
 
-      <a id="link-filter" href="#"><span class="filter-icon"><img src="./ressources/outline_filter_alt_black_36dp.png" alt="filter_icon"></span></a>
+      <a id="link-filter" href="#"
+        ><span class="filter-icon"
+          ><img
+            src="./ressources/outline_filter_alt_black_36dp.png"
+            alt="filter_icon" /></span
+      ></a>
       <!-- filtres -->
 
       <!-- categories -->
       <div class="div-filter">
-        <section class="filtre">
+        <div class="filtre">
           <form>
             <label for="category">Catégorie</label>
             <select name="category" id="category">
@@ -143,7 +147,7 @@
             <input type="radio" id="star1" name="rate" value="1" checked />
             <label for="star1" title="1 étoile"></label>
           </div>
-          
+
           <!-- prix -->
 
           <div class="rate" id="prix">
@@ -165,13 +169,13 @@
             <label for="delivery" class="label_filter">Livraison</label>
             <input type="checkbox" name="delivery" id="delivery" />
           </div>
-          
+
           <!-- à emporter -->
           <div class="checkbox">
             <label for="takeaway" class="label_filter">À emporter</label>
             <input type="checkbox" name="takeaway" id="takeaway" />
           </div>
-          
+
           <!-- distance -->
           <div class="distance">
             <label for="distance" id="distance_label">Distance</label>
@@ -185,7 +189,7 @@
               value="4"
             />
             <datalist id="markers">
-              <p>(km)</p>
+              (km)
               <option value="0">1</option>
               <option value="1">2</option>
               <option value="2">5</option>
@@ -193,13 +197,13 @@
               <option value="4">15</option>
             </datalist>
           </div>
-          
+
           <!-- hallal -->
           <div class="checkbox">
             <label for="halal" class="label_filter">Halal</label>
             <input type="checkbox" name="halal" id="halal" />
           </div>
-          
+
           <!-- végétarien -->
           <div class="checkbox">
             <label for="vege" class="label_filter">Végétarien</label>
@@ -207,273 +211,401 @@
           </div>
 
           <button id="filterButton">Valider</button>
-        </section>
+        </div>
       </div>
       <!-- fin filtre -->
     </header>
-    
-  <main>
-    <section class="bon_plan">
-      <h3>Bon plan</h3>
-      <div id="bon_plan">
-        <section id="bon_plan_img">
-          <img class="bon_plan_img" src="ressources/traditionelle.jpg" alt="cuisinetraditionnelle">
-          <img class="bon_plan_img" src="ressources/bon_plan_01.jpg" alt="cuisinetraditionnelle">
-          <img class="bon_plan_img" src="ressources/bon_plan_02.jpg" alt="cuisinetraditionnelle">
-        </section>
-        <article class="bon_plan_article">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-            cum accusamus optio magnam unde, aspernatur dolorum , vero omnis dolores enim! Consequuntur, omnis
-            eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati totam enim saepe mollitia,
-            inventore ratione cupiditate est ex pariatur aliquid earum eveniet dolore ut incidunt assumenda esse aperiam
-            deleniti?
-          </p>
-          <div class="hidden_paragraph">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum , vero omnis dolores enim! Consequuntur, omnis
-              eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iusto consequuntur consectetur
-              dolore iste tenetur dolorum! Vitae, officia earum veritatis voluptate ratione eum fuga accusantium ipsum.
-              Consectetur exercitationem incidunt temporibus.
-            </p>
+
+    <main>
+      <section class="bon_plan">
+        <h3>Bon plan</h3>
+        <div id="bon_plan">
+          <div id="bon_plan_img">
+            <img
+              class="bon_plan_img"
+              src="ressources/traditionelle.jpg"
+              alt="cuisinetraditionnelle"
+            />
+            <img
+              class="bon_plan_img"
+              src="ressources/bon_plan_01.jpg"
+              alt="cuisinetraditionnelle"
+            />
+            <img
+              class="bon_plan_img"
+              src="ressources/bon_plan_02.jpg"
+              alt="cuisinetraditionnelle"
+            />
           </div>
-          <a href="http://www.lafinemousse.fr/" class="button"><button>En savoir plus</button></a>
-        </article>
-      </div>
-    </section>
-
-    <!--Début de la première catégorie de restaurant-->
-
-    <section class="category" id="tag_near">
-      <h3>Proches de chez vous</h3>
-      <div class="category_div">
-        <section class="category_section" id="near1">
-          <img class=category_img src="ressources/food.jpg" alt="food">
-          <article class="category_article">
+          <div class="bon_plan_article">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              dolore, adipisci alias vel velit quos eveniet cum accusamus optio
+              magnam unde, aspernatur dolorum , vero omnis dolores enim!
+              Consequuntur, omnis eaque. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quos obcaecati totam enim saepe mollitia,
+              inventore ratione cupiditate est ex pariatur aliquid earum eveniet
+              dolore ut incidunt assumenda esse aperiam deleniti?
             </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-        <section class="category_section" id="near2">
-          <img class=category_img src="ressources/food_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-
-      </div>
-    </section>
-    <!--Fin de la première catégorie de restaurant-->
-
-    <!--Début de la deuxième catégorie de restaurant-->
-
-    <section class="category" id="tag_italian">
-      <h3>Italien</h3>
-      <div class="category_div">
-        <section class="category_section" id="italian1">
-          <img class=category_img src="ressources/italian.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum. </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-        <section class="category_section" id="italian2">
-          <img class=category_img src="ressources/italian_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-      </div>
-    </section>
-
-    <!--Fin de la deuxième catégorie de restaurant-->
-
-    <!--Début de la troisième catégorie de restaurant-->
-
-    <section class="category" id="tag_asian">
-      <h3>Asiatique</h3>
-      <div class="category_div">
-        <section class="category_section" id="asian1">
-          <img class=category_img src="ressources/asiatique.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-        <section class="category_section" id="asian2">
-          <img class=category_img src="ressources/asiatique_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-      </div>
-    </section>
-
-    <!--Fin de la troisième catégorie de restaurant-->
-
-    <!--Début de la quatrième catégorie de restaurant-->
-
-    <section class="category" id="tag_fastfood">
-      <h3>Fastfood</h3>
-      <div class="category_div">
-        <section class="category_section" id="fastfood1">
-          <img class=category_img src="ressources/fastfood.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-        <section class="category_section" id="fastfood2">
-          <img class=category_img src="ressources/fastfood_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-      </div>
-    </section>
-
-<!-- Début de la cinquième catégorie de restaurant -->
-    <section class="category" id="tag_french">
-      <h3>Français</h3>
-      <div class="category_div">
-        <section class="category_section" id="french1">
-          <img class=category_img src="ressources/français.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-        <section class="category_section" id="french2">
-          <img class=category_img src="ressources/français_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-      </div>
-    </section>
-
-    <!--Fin de la cinquième catégorie de restaurant-->
-
-    <!--Début de la sixième catégorie de restaurant-->
-
-    <section class="category" id="tag_texmex">
-      <h3>Texmex</h3>
-      <div class="category_div">
-        <section class="category_section" id="texmex1">
-          <img class=category_img src="ressources/tex_mex.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://www.peppeparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
-        </section>
-
-        <section class="category_section" id="texmex2">
-          <img class=category_img src="ressources/tex_mex_02.jpg" alt="food">
-          <article class="category_article">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-              cum accusamus optio magnam unde, aspernatur dolorum.
-            </p>
-            <a href="https://laconfidenteparis.fr/" class="button"><button>En savoir plus</button></a>
-          </article>
+            <div class="hidden_paragraph">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum , vero omnis dolores enim!
+                Consequuntur, omnis eaque. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Molestiae iusto consequuntur
+                consectetur dolore iste tenetur dolorum! Vitae, officia earum
+                veritatis voluptate ratione eum fuga accusantium ipsum.
+                Consectetur exercitationem incidunt temporibus.
+              </p>
+            </div>
+            <div class="div-button">
+              <a href="http://www.lafinemousse.fr/" class="button">
+                En savoir plus</a
+              >
+            </div>
+          </div>
         </div>
       </section>
-      
+
+      <!--Début de la première catégorie de restaurant-->
+
+      <section class="category" id="tag_near">
+        <h3>Proches de chez vous</h3>
+        <div class="category_div">
+          <div class="category_section" id="near1">
+            <img class="category_img" src="ressources/food.jpg" alt="food" />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="category_section" id="near2">
+            <img class="category_img" src="ressources/food_02.jpg" alt="food" />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Fin de la première catégorie de restaurant-->
+
+      <!--Début de la deuxième catégorie de restaurant-->
+
+      <section class="category" id="tag_italian">
+        <h3>Italien</h3>
+        <div class="category_div">
+          <div class="category_section" id="italian1">
+            <img class="category_img" src="ressources/italian.jpg" alt="food" />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="category_section" id="italian2">
+            <img
+              class="category_img"
+              src="ressources/italian_02.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Fin de la deuxième catégorie de restaurant-->
+
+      <!--Début de la troisième catégorie de restaurant-->
+
+      <section class="category" id="tag_asian">
+        <h3>Asiatique</h3>
+        <div class="category_div">
+          <div class="category_section" id="asian1">
+            <img
+              class="category_img"
+              src="ressources/asiatique.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="category_section" id="asian2">
+            <img
+              class="category_img"
+              src="ressources/asiatique_02.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Fin de la troisième catégorie de restaurant-->
+
+      <!--Début de la quatrième catégorie de restaurant-->
+
+      <section class="category" id="tag_fastfood">
+        <h3>Fastfood</h3>
+        <div class="category_div">
+          <div class="category_section" id="fastfood1">
+            <img
+              class="category_img"
+              src="ressources/fastfood.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="category_section" id="fastfood2">
+            <img
+              class="category_img"
+              src="ressources/fastfood_02.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Début de la cinquième catégorie de restaurant -->
+      <section class="category" id="tag_french">
+        <h3>Français</h3>
+        <div class="category_div">
+          <div class="category_section" id="french1">
+            <img
+              class="category_img"
+              src="ressources/français.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="category_section" id="french2">
+            <img
+              class="category_img"
+              src="ressources/français_02.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Fin de la cinquième catégorie de restaurant-->
+
+      <!--Début de la sixième catégorie de restaurant-->
+
+      <section class="category" id="tag_texmex">
+        <h3>Texmex</h3>
+        <div class="category_div">
+          <div class="category_section" id="texmex1">
+            <img class="category_img" src="ressources/tex_mex.jpg" alt="food" />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="category_section" id="texmex2">
+            <img
+              class="category_img"
+              src="ressources/tex_mex_02.jpg"
+              alt="food"
+            />
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--Début de la septième catégorie de restaurant-->
 
       <section class="category" id="tag_gourmet">
         <h3>Gastronomique</h3>
         <div class="category_div">
-          <section class="category_section" id="gourmet1">
+          <div class="category_section" id="gourmet1">
             <img
               class="category_img"
               src="ressources/gastronomique_01.jpg"
               alt="food"
             />
-            <article class="category_article">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-                cum accusamus optio magnam unde, aspernatur dolorum.</p>
-              <a href="https://www.peppeparis.fr/" class="button"
-                ><button>En savoir plus</button></a
-              >
-            </article>
-          </section>
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://www.peppeparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
 
-          <section class="category_section" id="gourmet2">
+          <div class="category_section" id="gourmet2">
             <img
               class="category_img"
               src="ressources/gastronomique_02.jpg"
               alt="food"
             />
-            <article class="category_article">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
-                cum accusamus optio magnam unde, aspernatur dolorum.</p>
-              <a href="https://laconfidenteparis.fr/" class="button"
-                ><button>En savoir plus</button></a
-              >
-            </article>
-          </section>
+            <div class="category_article">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                dolore, adipisci alias vel velit quos eveniet cum accusamus
+                optio magnam unde, aspernatur dolorum.
+              </p>
+              <div class="div-button">
+                <a href="https://laconfidenteparis.fr/" class="button">
+                  En savoir plus</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!--Fin de la septième catégorie de restaurant-->
     </main>
 
     <!--partie main fin-->
- 
+
     <footer>
-      <p>&copy2023 The SPOON</p>
+      <p>&copy;2023 The SPOON</p>
       <!-- début lien formulaire-->
-      <input type="button" class="button-form" onclick="window.location.href = 'formulaire.html';" value="rejoignez nous" />
+      <input
+        type="button"
+        class="button-form"
+        onclick="window.location.href = 'formulaire.html';"
+        value="rejoignez nous"
+      />
       <!-- fin lien formulaire-->
       <ul>
         <li><a href="#">Terms and conditions</a></li>
         <li><a href="#">Privacy policy</a></li>
       </ul>
-  </footer>
-  <script src="script.js"></script>
-</body>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
