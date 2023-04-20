@@ -332,13 +332,16 @@ h3 {
   padding-bottom: 0.5rem;
 }
 
-.button, button {
+.button,
+button {
   margin: 0.5rem;
   align-self: flex-end;
 }
 
-.div-button, button,
-.button-form, .submit {
+.div-button,
+button,
+.button-form,
+.submit {
   font-size: 0.7rem;
   margin-right: 20px;
   padding: 10px 0.4rem;
@@ -353,14 +356,16 @@ h3 {
   align-self: self-end;
 }
 
-.div-button:hover, button:hover {
+.div-button:hover,
+button:hover {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
   box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
-.div-button:active, button:active {
+.div-button:active,
+button:active {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
@@ -573,13 +578,15 @@ footer ul li a:visited {
   margin: auto;
 }
 
-.button-form:hover, .submit:hover {
+.button-form:hover,
+.submit:hover {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
   box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
-.button-form:active, .submit:active {
+.button-form:active,
+.submit:active {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
