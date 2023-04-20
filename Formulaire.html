@@ -11,18 +11,19 @@
   <body>
     <header>
       <h1>
-        <a id="home_link" class="link-main-page" href="/"
-          ><img id="logo" src="ressources\the_spoon2.png "
+        <a id="home_link" class="link-main-page" href="/">
+          <img id="logo" src="ressources/the_spoon2.png " alt="logo"
         /></a>
         Ajouter votre restaurant
       </h1>
     </header>
     <main>
       <!-- Nom du restaurant -->
+
       <form class="corps-formulaire">
         <div class="other">
           <label for="name-restaurant">Nom du restaurant</label>
-          <input type="text" name="name" id="name" required />
+          <input type="text" name="name" id="name-restaurant" required />
         </div>
 
         <!-- Adresse du restaurant -->
@@ -37,16 +38,10 @@
           <input
             type="email"
             name="mail"
-            id="mail"
+            id="Mail"
             placeholder="nom@domaine"
             required
           />
-        </div>
-
-        <!-- Adresse mail -->
-        <div class="other">
-          <label for="Mail"> Votre Email</label>
-          <input type="email" name="mail" id="mail" placeholder="nom@domaine" />
         </div>
 
         <!--ajouter une photo-->
@@ -63,7 +58,7 @@
 
         <!-- catégorie -->
         <section class="filtre">
-          <form>
+          <section class="filtre-caté">
             <label for="categorie">Catégorie</label>
             <select name="categorie" id="categorie">
               <option value="fastfood">Fast Food</option>
@@ -73,7 +68,7 @@
               <option value="français">Français</option>
               <option value="gastronomique">Gastronomique</option>
             </select>
-          </form>
+          </section>
 
           <section class="checkbox-media">
             <div class="checkbox">
@@ -82,15 +77,15 @@
               <label for="vege">Végétarien</label>
               <input type="checkbox" name="vege" id="vege" />
             </div>
-          </section>
 
-          <!-- livraison ou à emporter -->
-          <div class="checkbox">
-            <label for="livraison">Livraison</label>
-            <input type="checkbox" name="livraison" id="livraison" />
-            <label for="emporter">À emporter</label>
-            <input type="checkbox" name="emporter" id="emporter" />
-          </div>
+            <!-- livraison ou à emporter -->
+            <div class="checkbox">
+              <label for="livraison">Livraison</label>
+              <input type="checkbox" name="livraison" id="livraison" />
+              <label for="emporter">À emporter</label>
+              <input type="checkbox" name="emporter" id="emporter" />
+            </div>
+          </section>
         </section>
         <div class="add-rest-div">
           <button id="add-rest" onclick="submitForm()">S'inscrire</button>
@@ -100,7 +95,7 @@
     <!-- footer -->
     <div class="div-footer">
       <footer>
-        <p>&copy2023 The SPOON</p>
+        <p>&amp;copy2023 The SPOON</p>
         <img src="ressources/the_spoon2.png" alt="logo The SPOON" />
       </footer>
     </div>
