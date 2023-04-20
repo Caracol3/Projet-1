@@ -16,6 +16,7 @@
 
   <body>
     <header>
+      <!-- Début Burger profil -->
     <div class="burger_menu">
 
       <ul class="menu" id="profil-ul">
@@ -25,10 +26,11 @@
                 <li class="profil-li"><a class="profil-a" href="/privacy-policy">Mon panier</a></li>
       </ul>
       <button class="hamburger">
-        <!-- material icons https://material.io/resources/icons/ -->
         <i class="menuIcon material-icons">menu</i>
         <i class=" material-icons closeIcon">close</i>
       </button>
+
+      <!-- Fin Burger profil -->
 
     </div>
        <div id="root">
@@ -72,14 +74,38 @@
             <form action="#" id="tri">
               <select name="tri">
                 <option value="meilleurs note" class="tri-option">
-                  meilleurs note
+                  Meilleurs note
                 </option>
-                <option value="distance" class="tri-option">distance</option>
-                <option value="prix">prix</option>
+                <option value="distance" class="tri-option">Distance</option>
+                <option value="prix">Prix croissant</option>
+                <option value="prix">Prix décroissant</option>
               </select>
               <input type="submit" value="Submit" id="submit" />
             </form>
           </div>
+
+          <div id="montriradio">
+            <form action="#" id="formTri">
+              <div>
+              <input type="radio" name="tri" id="triNote">
+              <label for="triNote">Meilleur Note</label>
+              </div>
+              <div>
+              <input type="radio" name="tri" id="triDistance">
+              <label for="triDistance">Distance</label>
+              </div>
+              <div>
+              <input type="radio" name="tri" id="triPrix">
+              <label for="triPrix">Prix croissant</label>
+              </div>
+              <div>
+              <input type="radio" name="tri" id="triPrix">
+              <label for="triPrix">Prix décroissant</label>
+              </div>
+              <input type="submit" value="Submit" id="submit" />
+            </form>
+          </div>
+
         </div>
       </nav>
 
@@ -397,8 +423,6 @@
         </div>
       </section>
       
-======================================
-
       <!--Début de la septième catégorie de restaurant-->
 
       <section class="category" id="tag_gourmet">
@@ -411,10 +435,11 @@
               alt="food"
             />
             <article class="category_article">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+                cum accusamus optio magnam unde, aspernatur dolorum.</p>
               <a href="https://www.peppeparis.fr/" class="button"
                 ><button>En savoir plus</button></a
-              ><br />
+              >
             </article>
           </section>
 
@@ -425,26 +450,29 @@
               alt="food"
             />
             <article class="category_article">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore, adipisci alias vel velit quos eveniet
+                cum accusamus optio magnam unde, aspernatur dolorum.</p>
               <a href="https://laconfidenteparis.fr/" class="button"
                 ><button>En savoir plus</button></a
-              ><br />
+              >
             </article>
           </section>
         </div>
       </section>
-
       <!--Fin de la septième catégorie de restaurant-->
     </main>
 
     <!--partie main fin-->
  
-<!-- début lien formulaire-->
-<input type="button" class="button-form" onclick="window.location.href = 'formulaire.html';" value="rejoignez nous" />
-<!-- fin lien formulaire-->
-  <footer>
-    <p>&copy2023 The SPOON</p>
-    <img src="ressources/the_spoon2.png" alt="logo The SPOON">
+    <footer>
+      <p>&copy2023 The SPOON</p>
+      <!-- début lien formulaire-->
+      <input type="button" class="button-form" onclick="window.location.href = 'formulaire.html';" value="rejoignez nous" />
+      <!-- fin lien formulaire-->
+      <ul>
+        <li><a href="#">Terms and conditions</a></li>
+        <li><a href="#">Privacy policy</a></li>
+      </ul>
   </footer>
   <script src="script.js"></script>
 </body>

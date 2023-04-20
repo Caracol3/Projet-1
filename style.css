@@ -1,5 +1,4 @@
 :root {
-
   --primary-color: linear-gradient(to top, #f0cb35, #c02425);
   --secondary-color: hsla(48, 74%, 51%, 0.899);
   --tertiary-color: #e65c00;
@@ -140,6 +139,10 @@ input.search-submit {
   outline: 0;
 }
 
+#montriradio {
+  display: none;
+}
+
 /* ******************** burger menu ******************** */
 .hamburger {
   position: fixed;
@@ -147,9 +150,9 @@ input.search-submit {
   top: 1rem;
   right: 1rem;
   padding: 4px;
-  border: black solid 1px;
-  background: rgb(197, 73, 73);
   cursor: pointer;
+  background-color: #c02425;
+  margin: 0;
 }
 
 .closeIcon {
@@ -175,7 +178,6 @@ input.search-submit {
 .showMenu {
   transform: translateY(0);
 }
-
 
 .profil {
   background-color: var(--tertiary-color);
@@ -204,7 +206,6 @@ input.search-submit {
 
 .profil-li {
   height: 2.5rem;
-  background-color: var(--secondary-color);
   color: aliceblue;
   width: 80%;
   display: flex;
@@ -219,7 +220,6 @@ li {
 }
 
 .profil-a {
-
   justify-content: center;
   display: flex;
   color: black;
@@ -228,7 +228,6 @@ li {
   background-color: var(--tertiary-color);
   border-radius: 1rem;
   margin-left: 0.5rem;
-
 }
 
 body {
@@ -295,7 +294,7 @@ p {
 }
 
 h3 {
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   border-radius: 0.5rem;
   padding: 2%;
   margin: 0.5rem;
@@ -334,8 +333,8 @@ h3 {
   align-self: flex-end;
 }
 
-button {
-
+button,
+.button-form, #submit {
   font-size: 0.7rem;
   margin-right: 20px;
   padding: 10px 0.4rem;
@@ -359,9 +358,9 @@ button:hover {
 
 button:active {
   letter-spacing: 3px;
-  background-color: var(--secondary-color);
-  color: var(--tertiary-color);
-  transform: translateY(10px);
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  transform: translateY(5px);
   transition: 100ms;
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.75);
 }
@@ -380,6 +379,12 @@ button:active {
   position: absolute;
   right: 10px;
   margin-top: 10px;
+  border-radius: 15px;
+}
+
+#link-filter:active {
+  transform: translateY(5px);
+  box-shadow: black 0px 7px 29px 0px;
 }
 
 .filtre {
@@ -517,7 +522,7 @@ datalist p {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #c02425;
   align-items: center;
   padding: 0 10px;
@@ -528,12 +533,51 @@ footer img {
   width: 50px;
 }
 
-footer ul {
-  margin: auto 0;
-}
-
 footer ul li {
   list-style: none;
+  font-size: 0.6em;
+}
+
+footer p {
+  font-size: 0.6em;
+}
+
+footer ul li a {
+  color: black;
+}
+
+footer ul li a:hover {
+  color: var(--secondary-color);
+}
+
+footer ul li a:active {
+  color: white;
+}
+
+footer ul li a:visited {
+  color: var(--tertiary-color);
+}
+
+/* bouton lien-form */
+.button-form {
+  background-color: var(--tertiary-color);
+  color: var(--second-color);
+  margin: auto;
+}
+
+.button-form:hover, #submit:hover {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  box-shadow: var(--primary-color) 0px 7px 29px 0px;
+}
+
+.button-form:active, #submit:active {
+  letter-spacing: 3px;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  transform: translateY(-5px);
+  transition: 100ms;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -572,6 +616,15 @@ footer ul li {
   }
 
   p {
+    font-size: 1rem;
+  }
+
+  footer ul li {
+    list-style: none;
+    font-size: 1rem;
+  }
+
+  footer p {
     font-size: 1rem;
   }
 }
@@ -630,30 +683,59 @@ footer ul li {
   .hidden_paragraph {
     display: inline;
   }
-  
-/* bouton lien-form */
-.button-form {
-  font-size: 0.5rem;
-  padding: 20px 10rem;
-  border-radius: 50px;
-  border: 0;
-  background-color: var(--tertiary-color);
-  color: var(--second-color);
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-  letter-spacing: 1.5px;
-}
-.button-form:hover {
-  letter-spacing: 3px;
-  background-color: var(--tertiary-color);
-  color: var(--primary-color);
-  box-shadow: var(--primary-color) 0px 7px 29px 0px;
-}
 
-.button:active {
-  letter-spacing: 3px;
-  background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
-  transform: translateY(10px);
-  transition: 100ms;
+  footer ul li {
+    list-style: none;
+    display: inline;
+    font-size: 1.3rem;
+    padding: 0;
+  }
+
+  footer {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer p {
+    font-size: 1.3rem;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #formTri {
+    width: 100%;
+  }
+
+  #formTri div {
+    display: flex;
+    align-items: center;
+  }
+
+  #formTri div label {
+    padding-left: 5px;
+    font-size: 1.2em;
+  }
+
+  #rechercheBarre {
+    display: grid;
+    grid-template: 1fr / 35% 1fr;
+  }
+
+  #montri {
+    display: none;
+  }
+
+  #montriradio {
+    display: flex;
+    justify-content: space-between;
+  }
 }

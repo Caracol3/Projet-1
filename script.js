@@ -4,6 +4,7 @@ const hamburger = document.querySelector(".hamburger");
 const closeIcon = document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
 closeIcon.style.display = "none";
+
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
@@ -16,12 +17,12 @@ function toggleMenu() {
   }
 }
 
+hamburger.addEventListener("click", toggleMenu);
 
 let linkFilter = document.getElementById("link-filter");
 let iconFilter = document.querySelector(".filter-icon");
 let filterMenu = document.querySelector(".div-filter");
 
-/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
 linkFilter.addEventListener("click", function (event) {
   event.preventDefault();
   iconFilter.classList.toggle("open");
