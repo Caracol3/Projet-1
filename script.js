@@ -1,17 +1,21 @@
-function showResponsiveMenu() {
-  let menu = document.getElementById("topnav_responsive_menu");
-  let icon = document.getElementById("topnav_hamburger_icon");
-  let root = document.getElementById("root");
-  if (menu.className === "") {
-    menu.className = "open";
-    icon.className = "open";
-    root.style.overflowY = "hidden";
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+closeIcon.style.display = "none";
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
   } else {
-    menu.className = "";
-    icon.className = "";
-    root.style.overflowY = "";
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
   }
 }
+
 
 let linkFilter = document.getElementById("link-filter");
 let iconFilter = document.querySelector(".filter-icon");
@@ -23,6 +27,7 @@ linkFilter.addEventListener("click", function (event) {
   iconFilter.classList.toggle("open");
   filterMenu.classList.toggle("open");
 });
+
 
 // Création classe d'objet restaurant
 
@@ -236,8 +241,6 @@ function filter() {
     ) {
       categorySections[i].classList.toggle("checkbox_restaurant_hide"); //Lui enlève la classe afin de l'afficher
     }
-
-    //Un autre appel de checkboxFilter() fait réapparaître un élément déjà caché, à régler
   }
 }
 // Fonction injection de data dans les sections restaurant
@@ -270,3 +273,9 @@ function checkboxFilter(checkbox, array, index) {
     }
   }
 }
+
+/* retour du bouton du formulaire */
+
+function submitForm (){
+  alert("formulaire envoyé");
+};
