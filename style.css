@@ -299,7 +299,6 @@ h3 {
   padding: 2%;
   margin: 0.5rem;
   align-self: flex-start;
-  max-width: auto;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -334,7 +333,8 @@ h3 {
 }
 
 button,
-.button-form, #submit {
+.button-form,
+#submit {
   font-size: 0.7rem;
   margin-right: 20px;
   padding: 10px 0.4rem;
@@ -565,13 +565,15 @@ footer ul li a:visited {
   margin: auto;
 }
 
-.button-form:hover, #submit:hover {
+.button-form:hover,
+#submit:hover {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
   box-shadow: var(--primary-color) 0px 7px 29px 0px;
 }
 
-.button-form:active, #submit:active {
+.button-form:active,
+#submit:active {
   letter-spacing: 3px;
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
@@ -600,7 +602,6 @@ footer ul li a:visited {
   }
 
   .category_section img {
-    max-width: 55;
     max-height: 100%;
     align-items: center;
   }
