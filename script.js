@@ -14,13 +14,13 @@ function showResponsiveMenu() {
 }
 
 let linkFilter = document.getElementById("link-filter");
-let burgerFilter = document.getElementById("burger-filter");
+let iconFilter = document.querySelector(".filter-icon");
 let filterMenu = document.querySelector(".div-filter");
 
 /* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
 linkFilter.addEventListener("click", function (event) {
   event.preventDefault();
-  burgerFilter.classList.toggle("open");
+  iconFilter.classList.toggle("open");
   filterMenu.classList.toggle("open");
 });
 

@@ -511,50 +511,6 @@ button:active {
   margin-top: 10px;
 }
 
-#burger-filter {
-  width: 30px;
-  height: 4px;
-  background: var(--secondary-color);
-  display: inline-block;
-  position: relative;
-  z-index: 100;
-  border-radius: 3px;
-}
-
-#burger-filter::before,
-#burger-filter::after {
-  content: "";
-  width: 30px;
-  height: 4px;
-  background: var(--secondary-color);
-  display: inline-block;
-  position: absolute;
-  transform-origin: center;
-  transition: all 0.3s ease;
-  border-radius: 3px;
-}
-
-#burger-filter::before {
-  top: -10px;
-}
-
-#burger-filter::after {
-  top: 10px;
-}
-
-#burger-filter.open {
-  background: transparent; /* la barre du milieu disparait */
-}
-/* celles du haut et du bas s'inclinent pour former une croix */
-#burger-filter.open::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-#burger-filter.open::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
 .filtre {
   display: flex;
   flex-direction: column;
@@ -673,7 +629,6 @@ datalist p {
 .filtre button {
   width: 80px;
   align-self: end;
-  margin-right: 20px;
   background-color: var(--secondary-color);
 }
 
