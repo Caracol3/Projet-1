@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire/ajout d'un restaurant</title>
+    <link rel="stylesheet" href="styleform.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a id="home_link" class="link-main-page" href="/Projet-1">
+          <img id="logo" src="ressources/the_spoon2.png " alt="logo"
+        /></a>
+        Ajouter votre restaurant
+      </h1>
+    </header>
+    <main>
+      <!-- Nom du restaurant -->
+
+      <form class="corps-formulaire">
+        <div class="other">
+          <label for="name-restaurant">Nom du restaurant</label>
+          <input type="text" name="name" id="name-restaurant" required />
+        </div>
+
+        <!-- Adresse du restaurant -->
+        <div class="other">
+          <label for="adresse">Votre adresse</label>
+          <input type="text" name="adresse" id="adresse" required />
+        </div>
+
+        <!-- Adresse mail -->
+        <div class="other">
+          <label for="Mail"> Votre Email</label>
+          <input
+            type="email"
+            name="mail"
+            id="Mail"
+            placeholder="nom@domaine"
+            required
+          />
+        </div>
+
+        <!--ajouter une photo-->
+        <div class="other">
+          <label for="photo">Photo</label>
+          <input type="file" name="photo" id="photo" required />
+        </div>
+
+        <!--date d'ouverture-->
+        <div class="other">
+          <label for="date">Date d'ouverture</label>
+          <input type="date" name="date" id="date" required />
+        </div>
+
+        <!-- catégorie -->
+        <section class="filtre">
+          <section class="filtre-caté">
+            <label for="categorie">Catégorie</label>
+            <select name="categorie" id="categorie">
+              <option value="fastfood">Fast Food</option>
+              <option value="asiatique">Asiatique</option>
+              <option value="tex mex">Tex Mex</option>
+              <option value="italien">Italien</option>
+              <option value="français">Français</option>
+              <option value="gastronomique">Gastronomique</option>
+            </select>
+          </section>
+
+          <section class="checkbox-media">
+            <div class="checkbox">
+              <label for="hallal">Hallal</label>
+              <input type="checkbox" name="hallal" id="hallal" />
+              <label for="vege">Végétarien</label>
+              <input type="checkbox" name="vege" id="vege" />
+            </div>
+
+            <!-- livraison ou à emporter -->
+            <div class="checkbox">
+              <label for="livraison">Livraison</label>
+              <input type="checkbox" name="livraison" id="livraison" />
+              <label for="emporter">À emporter</label>
+              <input type="checkbox" name="emporter" id="emporter" />
+            </div>
+          </section>
+        </section>
+        <div class="add-rest-div">
+          <button id="add-rest" onclick="submitForm()">S'inscrire</button>
+        </div>
+      </form>
+    </main>
+    <!-- footer -->
+    <div class="div-footer">
+      <footer>
+        <p>&amp;copy2023 The SPOON</p>
+        <img src="ressources/the_spoon2.png" alt="logo The SPOON" />
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
